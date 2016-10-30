@@ -10,11 +10,14 @@
 <body>
 <main>
   <section class="about">
-    <h1>Helene</h1>
-    <h2>position</h2>
-    <picture class="portrait">
-      <img src="images/helene.jpg" alt="Helene">
-    </picture>
+    <div class="about--portrait">
+      <h1>Helene Shaikh</h1>
+      <h2 class="h-color-pink">position</h2>
+      <picture class="portrait">
+        <img src="images/helene.jpg"
+             srcset="" alt="Helene" sizes="">
+      </picture>
+    </div>
     <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna.
       Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl
       consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel
@@ -24,19 +27,19 @@
       ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel
       augue laoreet rutrum faucibus dolor auctor.</p>
     <address>
-      <p class="address--birth_date">
+      <p class="contact--born">
         Ornare Ultricies Bibendum<br>
         Porta Quam
       </p>
-      <p class="address--contact_info">
+      <p class="contact--phone">
         <a href="tel:+32498322603">+32 498 322 603</a><br>
         <a href="mailto:blabla@gmail.com">blabla@gmail.com</a>
       </p>
-      <p class="address--home_address">
+      <p class="contact--address">
         Etiam Elit Bibendum Amet<br>
         Elit Consectetur Fermentum Quam
       </p>
-      <p class="address--github">
+      <p class="contact--github">
         <a href="www.github.com">www.github.com</a>
       </p>
     </address>
@@ -46,22 +49,34 @@
     <section class="skills__work">
       <ol>
         <li class="skill">
-          <div class="skill__date"><time datetime=""></time> - <time datetime=""></time></div>
-          <div class="skill__name"></div>
+          <div class="skill__date">
+            <time datetime="">20/1/2012</time>
+            -
+            <time datetime="">20/1/2012</time>
+          </div>
+          <div class="skill__name">Vulputate Adipiscing</div>
           <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
             dolorem dolores ea eius, et facilis fugit illo illum inventore libero mollitia nihil nobis, quibusdam
             recusandae sunt suscipit vero, voluptatem?</p>
         </li>
         <li class="skill">
-          <div class="skill__date"><time datetime=""></time> - <time datetime=""></time></div>
-          <div class="skill__name"></div>
+          <div class="skill__date">
+            <time datetime="">20/1/2012</time>
+            -
+            <time datetime="">20/1/2012</time>
+          </div>
+          <div class="skill__name">Vulputate Adipiscing</div>
           <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
             dolorem dolores ea eius, et facilis fugit illo illum inventore libero mollitia nihil nobis, quibusdam
             recusandae sunt suscipit vero, voluptatem?</p>
         </li>
         <li class="skill">
-          <div class="skill__date"><time datetime=""></time> - <time datetime=""></time></div>
-          <div class="skill__name"></div>
+          <div class="skill__date">
+            <time datetime="">20/1/2012</time>
+            -
+            <time datetime="">20/1/2012</time>
+          </div>
+          <div class="skill__name">Vulputate Adipiscing</div>
           <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
             dolorem dolores ea eius, et facilis fugit illo illum inventore libero mollitia nihil nobis, quibusdam
             recusandae sunt suscipit vero, voluptatem?</p>
@@ -72,7 +87,11 @@
     <section class="skills__education">
       <ol>
         <li class="skill">
-          <div class="skill__date"><time datetime=""></time> - <time datetime=""></time></div>
+          <div class="skill__date">
+            <time datetime="">20/1/2012</time>
+            -
+            <time datetime="">20/1/2012</time>
+          </div>
           <div class="skill__name">VUB</div>
           <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
             recusandae sunt suscipit vero, voluptatem?</p>
@@ -82,16 +101,13 @@
     <section class="skills__certificates">
       <ol>
         <li>
-          <img src="images/oracle.svg" alt="Oracle logo">
-          <div class="skill__certificate">bla</div>
+          <p class="skill__name">Oracle</p>
         </li>
         <li>
-          <img src="images/google.svg" alt="Google logo">
-          <div class="skill_certificate">bla</div>
+          <p class="skill__name">Google</p>
         </li>
-        <li>
-          <img src="images/udacity.svg" alt="Udacity logo">
-          <div class="skill__certificate">bla</div>
+        <li class="skill__name">
+          <p>Udacity</p>
         </li>
       </ol>
     </section>
@@ -99,6 +115,7 @@
 
     </section>
   </section>
+  <section class="maps"></section>
 </main>
 
 <script src="/bower_components/jquery/dist/jquery.js"></script>
