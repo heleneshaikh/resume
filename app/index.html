@@ -8,116 +8,120 @@
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-<main>
-  <section class="about">
-    <div class="about--portrait">
-      <h1>Helene Shaikh</h1>
-      <h2 class="h-color-pink">position</h2>
-      <picture class="portrait">
-        <img src="images/helene.jpg"
-             srcset="" alt="Helene" sizes="">
-      </picture>
-    </div>
-    <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna.
-      Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl
-      consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel
-      augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-    <p>Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes,
-      nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus
-      ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel
-      augue laoreet rutrum faucibus dolor auctor.</p>
-    <address>
-      <p class="contact--born">
-        Ornare Ultricies Bibendum<br>
-        Porta Quam
-      </p>
-      <p class="contact--phone">
-        <a href="tel:+32498322603">+32 498 322 603</a><br>
-        <a href="mailto:blabla@gmail.com">blabla@gmail.com</a>
-      </p>
-      <p class="contact--address">
-        Etiam Elit Bibendum Amet<br>
-        Elit Consectetur Fermentum Quam
-      </p>
-      <p class="contact--github">
-        <a href="www.github.com">www.github.com</a>
-      </p>
-    </address>
-  </section>
-
-  <section class="skills">
-    <section class="skills__work">
-      <ol>
-        <li class="skill">
-          <div class="skill__date">
-            <time datetime="">20/1/2012</time>
-            -
-            <time datetime="">20/1/2012</time>
-          </div>
-          <div class="skill__name">Vulputate Adipiscing</div>
-          <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
-            dolorem dolores ea eius, et facilis fugit illo illum inventore libero mollitia nihil nobis, quibusdam
-            recusandae sunt suscipit vero, voluptatem?</p>
-        </li>
-        <li class="skill">
-          <div class="skill__date">
-            <time datetime="">20/1/2012</time>
-            -
-            <time datetime="">20/1/2012</time>
-          </div>
-          <div class="skill__name">Vulputate Adipiscing</div>
-          <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
-            dolorem dolores ea eius, et facilis fugit illo illum inventore libero mollitia nihil nobis, quibusdam
-            recusandae sunt suscipit vero, voluptatem?</p>
-        </li>
-        <li class="skill">
-          <div class="skill__date">
-            <time datetime="">20/1/2012</time>
-            -
-            <time datetime="">20/1/2012</time>
-          </div>
-          <div class="skill__name">Vulputate Adipiscing</div>
-          <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
-            dolorem dolores ea eius, et facilis fugit illo illum inventore libero mollitia nihil nobis, quibusdam
-            recusandae sunt suscipit vero, voluptatem?</p>
-        </li>
-      </ol>
+<div class="container">
+  <main>
+    <section class="about">
+      <div class="about--portrait">
+        <h1>Helene Shaikh</h1>
+        <h2 class="h-color-pink">position</h2>
+        <picture class="portrait">
+          <img src="images/helene.jpg"
+               srcset="images/helene.jpg 320w" alt="Helene" sizes="(max-width:550px) 30vw, 18vw">
+        </picture>
+      </div>
+      <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna.
+        Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl
+        consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus
+        vel.</p>
+      <p>Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus
+        augue laoreet rutrum faucibus dolor auctor.</p>
+      <address>
+        <p class="contact--born">
+          Ornare Ultricies Bibendum<br>
+          Porta Quam
+        </p>
+        <p class="contact--phone">
+          <a href="tel:+32498322603">+32 498 322 603</a><br>
+          <a href="mailto:blabla@gmail.com">blabla@gmail.com</a>
+        </p>
+        <p class="contact--address">
+          Etiam Elit Bibendum Amet<br>
+          Elit Consectetur Fermentum Quam
+        </p>
+        <p class="contact--github">
+          <a href="www.github.com">www.github.com</a>
+        </p>
+      </address>
     </section>
 
-    <section class="skills__education">
-      <ol>
-        <li class="skill">
-          <div class="skill__date">
-            <time datetime="">20/1/2012</time>
-            -
-            <time datetime="">20/1/2012</time>
-          </div>
-          <div class="skill__name">VUB</div>
-          <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
-            recusandae sunt suscipit vero, voluptatem?</p>
-        </li>
-      </ol>
-    </section>
-    <section class="skills__certificates">
-      <ol>
-        <li>
-          <p class="skill__name">Oracle</p>
-        </li>
-        <li>
-          <p class="skill__name">Google</p>
-        </li>
-        <li class="skill__name">
-          <p>Udacity</p>
-        </li>
-      </ol>
-    </section>
-    <section class="skills_graph">
+    <section class="skills">
+      <section class="skills__work">
+        <ol>
+          <li class="skill">
+            <div class="skill__date">
+              <time datetime="">20/1/2012</time>
+              -
+              <time datetime="">20/1/2012</time>
+            </div>
+            <div class="skill__name">Vulputate Adipiscing</div>
+            <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
+              dolorem dolores ea eius, et facilis fugit illo illum inventore libero mollitia nihil nobis, quibusdam
+              recusandae sunt suscipit vero, voluptatem?</p>
+          </li>
+          <li class="skill">
+            <div class="skill__date">
+              <time datetime="">20/1/2012</time>
+              -
+              <time datetime="">20/1/2012</time>
+            </div>
+            <div class="skill__name">Vulputate Adipiscing</div>
+            <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
+              dolorem dolores ea eius, et facilis fugit illo illum inventore libero mollitia nihil nobis, quibusdam
+              recusandae sunt suscipit vero, voluptatem?</p>
+          </li>
+          <li class="skill">
+            <div class="skill__date">
+              <time datetime="">20/1/2012</time>
+              -
+              <time datetime="">20/1/2012</time>
+            </div>
+            <div class="skill__name">Vulputate Adipiscing</div>
+            <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
+              dolorem dolores ea eius, et facilis fugit illo illum inventore libero mollitia nihil nobis, quibusdam
+              recusandae sunt suscipit vero, voluptatem?</p>
+          </li>
+        </ol>
+      </section>
 
+      <section class="skills__education">
+        <ol>
+          <li class="skill">
+            <div class="skill__date">
+              <time datetime="">20/1/2012</time>
+              -
+              <time datetime="">20/1/2012</time>
+            </div>
+            <div class="skill__name">VUB</div>
+            <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
+              recusandae sunt suscipit vero, voluptatem?</p>
+          </li>
+        </ol>
+      </section>
+      <section class="skills__certificates">
+        <ol>
+            <li class="skill__name--oracle">Oracle Certified Associate SE8</li>
+            <li class="skill__name--google">Front-end Developer by Google</li>
+            <li class="skill__name--udacity">Android Developer by Udacity</li>
+        </ol>
+      </section>
+      <section class="skills__graph">
+        <dl>
+          <dd class="percentage percentage-80"><span class="text">HTML</span></dd>
+          <dd class="percentage percentage-80"><span class="text">CSS</span></dd>
+          <dd class="percentage percentage-70"><span class="text">JavaScript</span></dd>
+          <dd class="percentage percentage-70"><span class="text">Java EE</span></dd>
+          <dd class="percentage percentage-70"><span class="text">Android</span></dd>
+          <dd class="percentage percentage-70"><span class="text">git</span></dd>
+          <dd class="percentage percentage-100"><span class="text">English</span></dd>
+          <dd class="percentage percentage-100"><span class="text">French</span></dd>
+          <dd class="percentage percentage-100"><span class="text">Dutch</span></dd>
+          <dd class="percentage percentage-70"><span class="text">Spanish</span></dd>
+        </dl>
+      </section>
     </section>
-  </section>
-  <section class="maps"></section>
-</main>
-
+  </main>
+</div>
 <script src="/bower_components/jquery/dist/jquery.js"></script>
 <script src="scripts/main.js"></script>
 </body>

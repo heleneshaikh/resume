@@ -1,103 +1,273 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 $pink: #A12750;
-$light-pink: lighten($pink, 20%);
+$light-pink: lighten($pink, 7%);
 
 html {
   font-size: 62.5%;
 }
 
 body {
-  font: 1.6rem "Roboto", sans-serif;
+  font: 1.3rem "Roboto", sans-serif;
   line-height: 1.5;
-  border-top: 10px solid $pink;
-  margin: 0;
+  text-align: justify;
+  margin-top:0;
+
+}
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 img {
   max-width: 100%;
 }
 
-p {
-  text-align: justify;
-  font-style: normal;
-}
-
 main {
-  width: 90%;
-  margin: 0 auto;
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
-  .about, .skills {
-    margin-top: 40px;
-  }
+  flex-wrap: wrap;
+  border-top: 5px solid $pink;
   .about {
-    flex-basis: 30%;
+    flex-basis: 35%;
   }
   .skills {
-    flex-basis: 60%;
+    flex-basis: 55%;
+    border-left: 1px dashed $pink;
+    padding-left: 40px;
+    p {
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .skills {
+      margin-top: 50px;
+    }
+    .about, .skills {
+      flex-basis: 100%;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 1.5rem;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    font-size: 1.5rem;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (min-width: 851px) {
+    font-size: 1.6rem;
+    h1 {
+      font-size: 3rem;
+    }
   }
 }
 
 .about--portrait {
   text-align: center;
-  color: $pink;
-  text-transform: uppercase;
+  font-size: 1.3rem;
   h1 {
-    font-weight: bold;
-    font-size: 2.5rem;
+    color: $pink;
     margin: 0;
   }
   h2 {
-    font-size: 1.5rem;
+    color: $light-pink;
+    margin: 0;
+  }
+  img {
+    border-radius: 50%;
+    margin-top: 20px;
   }
 }
 
-.skills {
-  li {
-    padding-bottom: 15px;
-  }
-  p {
-    margin-top: 3px;
+$contact-items: born, phone, github, address;
+
+address {
+  font-style: normal;
+  margin-top:80px;
+
+  @each $contact-item in $contact-items {
+    .contact--#{$contact-item} {
+      position: relative;
+      padding-left: 45px;
+
+      &::before {
+        content: url("../images/#{$contact-item}.svg");
+        background-size: 20px;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+      }
+    }
   }
 }
 
-ol {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.skill__name {
+%titles {
   color: $pink;
   font-weight: bold;
   text-transform: uppercase;
   padding-top: 5px;
 }
 
-$contact-items: born, phone, address, github;
+.skill__name {
+  @extend %titles;
+}
 
-@each $item in $contact-items {
-  .contact--#{$item} {
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin-bottom: 44px;
+  }
+}
+
+$certificate-list: google, udacity, oracle;
+.skills {
+  &__work {
     position: relative;
-    padding-left: 45px;
-
-    &:before {
-      background: url('../images/#{$item}.svg') no-repeat;
-      background-size: 30px;
-      content: ' ';
-      height: 35px;
-      width: 35px;
-      display: inline-block;
-      text-align: center;
-      border-right: 1px solid $pink;
+    .skill__name::before {
+      background: url('../images/bookmark.svg') no-repeat;
       position: absolute;
-      left: 0;
+      background-size: 20px;
+      height: 20px;
+      width: 20px;
+      content: '';
+      left: -40px;
+      transform: rotate(-90deg);
+    }
+  }
+  &__education {
+    position: relative;
+    .skill__name::before {
+      background: url('../images/VUB.svg') no-repeat;
+      position: absolute;
+      background-size: 25px;
+      height: 25px;
+      width: 25px;
+      content: '';
+      left: -42px;
+    }
+  }
+
+  &__certificates {
+    position: relative;
+    .skill__name {
+      @each $certificate in $certificate-list {
+        &--#{$certificate} {
+          @extend %titles;
+
+          &::before {
+            background: url('../images/#{$certificate}.svg') no-repeat;
+            position: absolute;
+            background-size: 25px;
+            height: 25px;
+            width: 25px;
+            content: '';
+            left: -42px;
+          }
+        }
+      }
     }
   }
 }
 
-.h-color-pink {
-  color: $light-pink;
+@for $i from 1 through 100 {
+  .percentage-#{$i}:after {
+    $value: ($i * 1%);
+    width: $value;
+  }
 }
+
+.percentage {
+  background: repeating-linear-gradient(
+      to right,
+      #ddd,
+      #ddd 1px,
+      #fff 1px,
+      #fff 5%
+  );
+}
+
+dl {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  width: 100%;
+  //max-width: 700px;
+  position: relative;
+  margin: 0;
+}
+
+dt {
+  align-self: flex-start;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  margin-left: 130px;
+}
+
+dd {
+  margin: 0;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  justify-content: flex-end;
+}
+
+.percentage {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  width: 100%;
+  height: 30px;
+  margin-left: 130px;
+  background: repeating-linear-gradient(
+      to right,
+      #ddd,
+      #ddd 1px,
+      #fff 1px,
+      #fff 5%
+  );
+
+  &:after {
+    content: "";
+    display: block;
+    background-color: #3d9970;
+    width: 50px;
+    margin-bottom: 10px;
+    height: 90%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color .3s ease;
+    cursor: pointer;
+  }
+  &:hover,
+  &:focus {
+    &:after {
+      background-color: #aaa;
+    }
+  }
+}
+
+
+
+
 
