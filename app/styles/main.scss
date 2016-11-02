@@ -8,11 +8,12 @@ html {
 }
 
 body {
-  font: 1.3rem "Roboto", sans-serif;
+  font: 1.6rem "Roboto", sans-serif;
   line-height: 1.5;
   text-align: justify;
-  margin-top:0;
-
+  margin-top: 0;
+  border-top: 5px solid $pink;
+  margin-bottom: 2em;
 }
 
 .container {
@@ -25,13 +26,16 @@ img {
 }
 
 main {
-  padding-top: 30px;
+  padding-top: 2.5em;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  border-top: 5px solid $pink;
+  margin-bottom: 3em;
   .about {
     flex-basis: 35%;
+    p {
+      margin-bottom: 0.7em;
+    }
   }
   .skills {
     flex-basis: 55%;
@@ -49,21 +53,13 @@ main {
       flex-basis: 100%;
       margin-left: 10px;
       margin-right: 10px;
-      font-size: 1.5rem;
     }
-    h1 {
-      font-size: 3rem;
-    }
-  }
-  @media screen and (max-width: 850px) {
-    font-size: 1.5rem;
     h1 {
       font-size: 3rem;
     }
   }
 
-  @media screen and (min-width: 851px) {
-    font-size: 1.6rem;
+  @media screen and (min-width: 551px) {
     h1 {
       font-size: 3rem;
     }
@@ -72,7 +68,7 @@ main {
 
 .about--portrait {
   text-align: center;
-  font-size: 1.3rem;
+  margin-bottom: 1.9em;
   h1 {
     color: $pink;
     margin: 0;
@@ -87,28 +83,53 @@ main {
   }
 }
 
+@mixin icon-size($size, $left) {
+  position: absolute;
+  background-size: 30px;
+  height: $size;
+  width: $size;
+  left: $left;
+}
+
 $contact-items: born, phone, github, address;
 
 address {
   font-style: normal;
-  margin-top:80px;
+  margin-top: 3em;
 
   @each $contact-item in $contact-items {
     .contact--#{$contact-item} {
       position: relative;
-      padding-left: 45px;
+      padding-left: 2.8em;
 
       &::before {
         content: url("../images/#{$contact-item}.svg");
-        background-size: 20px;
-        width: 40px;
-        height: 40px;
+        background-color: $pink;
+        @include icon-size(40px, 0);
+        border-radius: 50%;
         display: inline-block;
         margin: 0 auto;
-        position: absolute;
-        left: 0;
       }
     }
+  }
+}
+
+@mixin work-logos($file) {
+  width: 35px;
+  height: 35px;
+  &::before {
+    background: url('../images/#{$file}.svg') no-repeat $pink;
+    @include icon-size(36px, -60px);
+    border-radius: 50%;
+    content: '';
+  }
+}
+
+$logos: work, certificates, education;
+
+@each $logo in $logos {
+  .skills__#{$logo}--logo {
+    @include work-logos($logo);
   }
 }
 
@@ -116,19 +137,24 @@ address {
   color: $pink;
   font-weight: bold;
   text-transform: uppercase;
-  padding-top: 5px;
+  padding-top: 0.2em;
 }
 
 .skill__name {
   @extend %titles;
+  &--oracle::before { //TODO doesn't work
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
+  }
 }
 
 ol {
   list-style-type: none;
-  margin: 0;
+  margin-top: 1em;
   padding: 0;
   li {
-    margin-bottom: 44px;
+    margin-bottom: 1.8em;
   }
 }
 
@@ -138,30 +164,26 @@ $certificate-list: google, udacity, oracle;
     position: relative;
     .skill__name::before {
       background: url('../images/bookmark.svg') no-repeat;
-      position: absolute;
-      background-size: 20px;
-      height: 20px;
-      width: 20px;
+      @include icon-size(20px, -40px);
       content: '';
-      left: -40px;
       transform: rotate(-90deg);
     }
   }
+
   &__education {
     position: relative;
     .skill__name::before {
       background: url('../images/VUB.svg') no-repeat;
-      position: absolute;
-      background-size: 25px;
-      height: 25px;
-      width: 25px;
+      @include icon-size(25px, -42px);
       content: '';
-      left: -42px;
     }
   }
 
   &__certificates {
     position: relative;
+    li {
+      margin-bottom: 0.6em;
+    }
     .skill__name {
       @each $certificate in $certificate-list {
         &--#{$certificate} {
@@ -169,12 +191,8 @@ $certificate-list: google, udacity, oracle;
 
           &::before {
             background: url('../images/#{$certificate}.svg') no-repeat;
-            position: absolute;
-            background-size: 25px;
-            height: 25px;
-            width: 25px;
+            @include icon-size(25px, -42px);
             content: '';
-            left: -42px;
           }
         }
       }
@@ -183,20 +201,14 @@ $certificate-list: google, udacity, oracle;
 }
 
 @for $i from 1 through 100 {
-  .percentage-#{$i}:after {
+  .percentage-#{$i}::after {
     $value: ($i * 1%);
     width: $value;
   }
 }
 
-.percentage {
-  background: repeating-linear-gradient(
-      to right,
-      #ddd,
-      #ddd 1px,
-      #fff 1px,
-      #fff 5%
-  );
+.skills__graph {
+  margin-top: 6%;
 }
 
 dl {
@@ -204,7 +216,6 @@ dl {
   background-color: white;
   flex-direction: column;
   width: 100%;
-  //max-width: 700px;
   position: relative;
   margin: 0;
 }
@@ -234,37 +245,25 @@ dd {
 
 .percentage {
   font-size: 1.2rem;
-  text-transform: uppercase;
   width: 100%;
   height: 30px;
-  margin-left: 130px;
-  background: repeating-linear-gradient(
-      to right,
-      #ddd,
-      #ddd 1px,
-      #fff 1px,
-      #fff 5%
-  );
+  margin-left: 100px;
 
-  &:after {
-    content: "";
+  &::after {
+    content: ' ';
     display: block;
-    background-color: #3d9970;
+    background-color: $pink;
     width: 50px;
-    margin-bottom: 10px;
     height: 90%;
     position: relative;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
-    transition: background-color .3s ease;
-    cursor: pointer;
   }
-  &:hover,
-  &:focus {
-    &:after {
-      background-color: #aaa;
-    }
-  }
+}
+
+#map {
+  width: 100%;
+  height: 400px;
 }
 
 

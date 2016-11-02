@@ -47,6 +47,7 @@
 
     <section class="skills">
       <section class="skills__work">
+        <div class="skills__work--logo"></div>
         <ol>
           <li class="skill">
             <div class="skill__date">
@@ -56,8 +57,7 @@
             </div>
             <div class="skill__name">Vulputate Adipiscing</div>
             <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
-              dolorem dolores ea eius, et facilis fugit illo illum inventore libero mollitia nihil nobis, quibusdam
-              recusandae sunt suscipit vero, voluptatem?</p>
+              recusandae sunt suscipit vero, voluptatem? Fringilla Vestibulum</p>
           </li>
           <li class="skill">
             <div class="skill__date">
@@ -67,8 +67,7 @@
             </div>
             <div class="skill__name">Vulputate Adipiscing</div>
             <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
-              dolorem dolores ea eius, et facilis fugit illo illum inventore libero mollitia nihil nobis, quibusdam
-              recusandae sunt suscipit vero, voluptatem?</p>
+              recusandae sunt suscipit vero, voluptatem? Fringilla Vestibulum</p>
           </li>
           <li class="skill">
             <div class="skill__date">
@@ -78,13 +77,23 @@
             </div>
             <div class="skill__name">Vulputate Adipiscing</div>
             <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
-              dolorem dolores ea eius, et facilis fugit illo illum inventore libero mollitia nihil nobis, quibusdam
-              recusandae sunt suscipit vero, voluptatem?</p>
+              recusandae sunt suscipit vero, voluptatem? Fringilla Vestibulum</p>
+          </li>
+          <li class="skill">
+            <div class="skill__date">
+              <time datetime="">20/1/2012</time>
+              -
+              <time datetime="">20/1/2012</time>
+            </div>
+            <div class="skill__name">Vulputate Adipiscing</div>
+            <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
+              recusandae sunt suscipit vero, voluptatem? Fringilla Vestibulum</p>
           </li>
         </ol>
       </section>
 
       <section class="skills__education">
+        <div class="skills__education--logo"></div>
         <ol>
           <li class="skill">
             <div class="skill__date">
@@ -99,15 +108,17 @@
         </ol>
       </section>
       <section class="skills__certificates">
+        <div class="skills__certificates--logo"></div>
         <ol>
-            <li class="skill__name--oracle">Oracle Certified Associate SE8</li>
-            <li class="skill__name--google">Front-end Developer by Google</li>
-            <li class="skill__name--udacity">Android Developer by Udacity</li>
+          <li class="skill__name--oracle">Oracle Certified Associate SE8</li>
+          <li class="skill__name--google">Front-end Developer by Google</li>
+          <li class="skill__name--udacity">Android Developer by Udacity</li>
         </ol>
       </section>
       <section class="skills__graph">
         <dl>
-          <dd class="percentage percentage-80"><span class="text">HTML</span></dd>
+          <dt></dt>
+          <dd class="percentage percentage-10"><span class="text">HTML</span></dd>
           <dd class="percentage percentage-80"><span class="text">CSS</span></dd>
           <dd class="percentage percentage-70"><span class="text">JavaScript</span></dd>
           <dd class="percentage percentage-70"><span class="text">Java EE</span></dd>
@@ -121,8 +132,13 @@
       </section>
     </section>
   </main>
+  <aside>
+    <div id="map"></div>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXkSXBimYMtfxcYqX1SL0H8r2B3uwza1M&callback=initMap">
+    </script>
+  </aside>
 </div>
-<script src="/bower_components/jquery/dist/jquery.js"></script>
 <script src="scripts/main.js"></script>
 </body>
 </html>
