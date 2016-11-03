@@ -12,35 +12,27 @@
   <main>
     <section class="about">
       <div class="about--portrait">
-        <h1>Helene Shaikh</h1>
-        <h2 class="h-color-pink">position</h2>
+        <h1 id="name"></h1>
+        <h2 class="h-color-pink" id="role"></h2>
         <picture class="portrait">
           <img src="images/helene.jpg"
                srcset="images/helene.jpg 320w" alt="Helene" sizes="(max-width:550px) 30vw, 18vw">
         </picture>
       </div>
-      <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna.
-        Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl
-        consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus
-        vel.</p>
-      <p>Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus
-        augue laoreet rutrum faucibus dolor auctor.</p>
+      <p id="welcome"></p>
       <address>
-        <p class="contact--born">
-          Ornare Ultricies Bibendum<br>
-          Porta Quam
-        </p>
+        <div class="born--logo"></div>
+        <p class="contact--born" id="born"></p>
+        <div class="phone--logo"></div>
         <p class="contact--phone">
-          <a href="tel:+32498322603">+32 498 322 603</a><br>
-          <a href="mailto:blabla@gmail.com">blabla@gmail.com</a>
+          <a href="tel:+32498322603" id="phone"></a><br>
+          <a href="mailto:blabla@gmail.com" id="mail"></a>
         </p>
-        <p class="contact--address">
-          Etiam Elit Bibendum Amet<br>
-          Elit Consectetur Fermentum Quam
-        </p>
+        <div class="address--logo"></div>
+        <p class="contact--address" id="address"></p>
+        <div class="github--logo"></div>
         <p class="contact--github">
-          <a href="www.github.com">www.github.com</a>
+         <a href="www.github.com" id="github"></a>
         </p>
       </address>
     </section>
@@ -51,43 +43,47 @@
         <ol>
           <li class="skill">
             <div class="skill__date">
-              <time datetime="">20/1/2012</time>
+              <time datetime="" class="startDate"></time>
               -
-              <time datetime="">20/1/2012</time>
+              <time datetime="" class="endDate"></time>
             </div>
-            <div class="skill__name">Vulputate Adipiscing</div>
-            <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
-              recusandae sunt suscipit vero, voluptatem? Fringilla Vestibulum</p>
+            <div class="skill__name employer"></div>
+            <p class="skill__description">
+              <span class="title"></span><br>
+              <span class="description"></span></p>
           </li>
           <li class="skill">
             <div class="skill__date">
-              <time datetime="">20/1/2012</time>
+              <time datetime="" class="startDate"></time>
               -
-              <time datetime="">20/1/2012</time>
+              <time datetime="" class="endDate"></time>
             </div>
-            <div class="skill__name">Vulputate Adipiscing</div>
-            <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
-              recusandae sunt suscipit vero, voluptatem? Fringilla Vestibulum</p>
+            <div class="skill__name employer"></div>
+            <p class="skill__description">
+              <span class="title"></span><br>
+              <span class="description"></span></p>
           </li>
           <li class="skill">
             <div class="skill__date">
-              <time datetime="">20/1/2012</time>
+              <time datetime="" class="startDate"></time>
               -
-              <time datetime="">20/1/2012</time>
+              <time datetime="" class="endDate"></time>
             </div>
-            <div class="skill__name">Vulputate Adipiscing</div>
-            <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
-              recusandae sunt suscipit vero, voluptatem? Fringilla Vestibulum</p>
+            <div class="skill__name employer"></div>
+            <p class="skill__description">
+              <span class="title"></span><br>
+              <span class="description"></span></p>
           </li>
           <li class="skill">
             <div class="skill__date">
-              <time datetime="">20/1/2012</time>
+              <time datetime="" class="startDate"></time>
               -
-              <time datetime="">20/1/2012</time>
+              <time datetime="" class="endDate"></time>
             </div>
-            <div class="skill__name">Vulputate Adipiscing</div>
-            <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
-              recusandae sunt suscipit vero, voluptatem? Fringilla Vestibulum</p>
+            <div class="skill__name employer"></div>
+            <p class="skill__description">
+              <span class="title"></span><br>
+              <span class="description"></span></p>
           </li>
         </ol>
       </section>
@@ -97,37 +93,37 @@
         <ol>
           <li class="skill">
             <div class="skill__date">
-              <time datetime="">20/1/2012</time>
+              <time datetime="" class="skill__date--startDate"></time>
               -
-              <time datetime="">20/1/2012</time>
+              <time datetime="" class="skill__date--endDate"></time>
+              <span id="location"></span>
             </div>
-            <div class="skill__name">VUB</div>
-            <p class="skill__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore
-              recusandae sunt suscipit vero, voluptatem?</p>
+            <a href="" class="skill__name" id="schoolName"></a>
+            <p class="skill__description" id="degree"></p>
           </li>
         </ol>
       </section>
       <section class="skills__certificates">
         <div class="skills__certificates--logo"></div>
         <ol>
-          <li class="skill__name--oracle">Oracle Certified Associate SE8</li>
-          <li class="skill__name--google">Front-end Developer by Google</li>
-          <li class="skill__name--udacity">Android Developer by Udacity</li>
+          <li class="skill__name--oracle" id="oracle"></li>
+          <li class="skill__name--google" id="google"></li>
+          <li class="skill__name--udacity" id="udacity"></li>
         </ol>
       </section>
       <section class="skills__graph">
+        <div class="skills__graph--logo"></div>
         <dl>
-          <dt></dt>
-          <dd class="percentage percentage-10"><span class="text">HTML</span></dd>
-          <dd class="percentage percentage-80"><span class="text">CSS</span></dd>
-          <dd class="percentage percentage-70"><span class="text">JavaScript</span></dd>
-          <dd class="percentage percentage-70"><span class="text">Java EE</span></dd>
-          <dd class="percentage percentage-70"><span class="text">Android</span></dd>
-          <dd class="percentage percentage-70"><span class="text">git</span></dd>
-          <dd class="percentage percentage-100"><span class="text">English</span></dd>
-          <dd class="percentage percentage-100"><span class="text">French</span></dd>
-          <dd class="percentage percentage-100"><span class="text">Dutch</span></dd>
-          <dd class="percentage percentage-70"><span class="text">Spanish</span></dd>
+          <dd class="percentage percentage-10"><span class="text"></span></dd>
+          <dd class="percentage percentage-80"><span class="text"></span></dd>
+          <dd class="percentage percentage-70"><span class="text"></span></dd>
+          <dd class="percentage percentage-70"><span class="text"></span></dd>
+          <dd class="percentage percentage-70"><span class="text"></span></dd>
+          <dd class="percentage percentage-70"><span class="text"></span></dd>
+          <dd class="percentage percentage-100"><span class="text"></span></dd>
+          <dd class="percentage percentage-100"><span class="text"></span></dd>
+          <dd class="percentage percentage-100"><span class="text"></span></dd>
+          <dd class="percentage percentage-70"><span class="text"></span></dd>
         </dl>
       </section>
     </section>
@@ -139,6 +135,10 @@
     </script>
   </aside>
 </div>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
 <script src="scripts/main.js"></script>
 </body>
 </html>
