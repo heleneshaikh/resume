@@ -118,24 +118,12 @@ var work = {
       endDate: "09-2012",
       employer: "Flagey",
       title: "Assistant Manager and Communications",
-      description: "Bla bla bla bla bla",
+      description: "Flagey was my first real work experience and it was immediately a challenging one. I had the chance to have three different functions," +
+      "which taught me a lot about multitasking, attention to detail and responsibility. I was the manager's assistant, communications employee and receptionist",
       location: {
         title: "Flagey concert venue",
         longitude: "50.826926",
         latitude: "4.373203"
-      }
-    },
-    {
-      startDate: "2010",
-      endDate: "2015",
-      employer: "Botanique",
-      title: "Internship Press and Communications",
-      description: "At Botanique I had the chance to learn about the workings of the press and communications within a concert venue. I stood in for the guest lists," +
-      "contacting radio stations to increase our ticket sale if needed, writing biographies for the website, etc. ",
-      location: {
-        title: "Botanique concert venue",
-        longitude: "50.854709",
-        latitude: "4.366243"
       }
     }
   ],
