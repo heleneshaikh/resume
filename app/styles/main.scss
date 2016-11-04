@@ -37,7 +37,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 img {
@@ -46,13 +46,13 @@ img {
 
 ol {
   list-style-type: none;
-  margin-top: 16px;
   padding: 0;
-  margin-left: 15px;
+  margin: 0;
   li {
-    margin-bottom: 28.8px;
+    margin: 0;
   }
 }
+
 
 main {
   padding-top: 40px;
@@ -159,6 +159,13 @@ $logos: work, certificates, education;
 .skills {
   &__work {
     position: relative;
+    ol {
+      margin-top: 16px;
+      margin-left: 15px;
+      li {
+        margin-bottom: 28.8px;
+      }
+    }
     .skill__name::before {
       background: url('../images/bookmark.svg') no-repeat;
       @include icon-size(17px, -40px, 17px);
@@ -176,6 +183,21 @@ $logos: work, certificates, education;
     position: relative;
     .skill__name {
       @include work-logos($vub, $grey);
+    }
+  }
+
+  .majors {
+    font-style: italic;
+  }
+
+  .online {
+    margin-top:20px;
+    margin-bottom:20px;
+    #title {
+    @extend %titles;
+    }
+    #school {
+      font-style: italic;
     }
   }
 

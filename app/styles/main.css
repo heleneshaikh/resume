@@ -26,18 +26,17 @@ h2 {
 
 a {
   text-decoration: none;
-  color: black; }
+  color: inherit; }
 
 img {
   max-width: 100%; }
 
 ol {
   list-style-type: none;
-  margin-top: 16px;
   padding: 0;
-  margin-left: 15px; }
+  margin: 0; }
   ol li {
-    margin-bottom: 28.8px; }
+    margin: 0; }
 
 main {
   padding-top: 40px;
@@ -187,7 +186,7 @@ address {
     content: '';
     border-radius: 50%; }
 
-.skill__name, .skills__certificates .skill__name--google, .skills__certificates .skill__name--udacity, .skills__certificates .skill__name--oracle {
+.skill__name, .skills .online #title, .skills__certificates .skill__name--google, .skills__certificates .skill__name--udacity, .skills__certificates .skill__name--oracle {
   color: #A12750;
   font-weight: bold;
   text-transform: uppercase;
@@ -195,6 +194,11 @@ address {
 
 .skills__work {
   position: relative; }
+  .skills__work ol {
+    margin-top: 16px;
+    margin-left: 15px; }
+    .skills__work ol li {
+      margin-bottom: 28.8px; }
   .skills__work .skill__name::before {
     background: url("../images/bookmark.svg") no-repeat;
     position: absolute;
@@ -218,6 +222,15 @@ address {
     left: -60px;
     content: '';
     border-radius: 50%; }
+
+.skills .majors {
+  font-style: italic; }
+
+.skills .online {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .skills .online #school {
+    font-style: italic; }
 
 .skills__certificates {
   position: relative;

@@ -51,7 +51,7 @@ function initMap() {
 //BIO DATA
 var bio = {
   name: "Helene Shaikh",
-  role: "Jr Front-End Developer",
+  role: "Junior Front-End & Java Developer",
   contacts: [{
     mobile: "+32 498 322 603",
     email: "helene.shaikh@gmail.com",
@@ -132,19 +132,6 @@ var work = {
         longitude: "50.826926",
         latitude: "4.373203"
       }
-    },
-    {
-      startDate: "2010",
-      endDate: "2015",
-      employer: "Botanique",
-      title: "Internship Press and Communications",
-      description: "At Botanique I had the chance to learn about the workings of the press and communications within a concert venue. I stood in for the guest lists," +
-      "contacting radio stations to increase our ticket sale if needed, writing biographies for the website, etc. ",
-      location: {
-        title: "Botanique concert venue",
-        longitude: "50.854709",
-        latitude: "4.366243"
-      }
     }
   ],
 
@@ -187,14 +174,14 @@ var education = {
       location: "Woluwe",
       degree: "Master in Taal-en Letterkunde (cum laude)",
       majors: [
-        "spanish", "dutch", "english", "philosophy" //TODO
+        "Spanish", " Dutch", " English", " Philosophy"
       ],
       startDate: "2006",
       endDate: "2011",
       url: "https://www.vub.ac.be/" //todo
     }
   ],
-  onlineCourses: [ //TODO
+  onlineCourses: [
     {
       title: "Try Git",
       school: "CodeSchool",
@@ -204,11 +191,18 @@ var education = {
   ],
   display: function () {
     for (var i = 0; i < education.schools.length; i++) {
-      document.getElementById("schoolName").append(education.schools[i].name);
+      // document.getElementById("schoolName").append(education.schools[i].name);
       document.getElementById("location").append(education.schools[i].location);
       document.getElementById("degree").append(education.schools[i].degree);
       $(".skill__date--startDate").get(i).append(education.schools[i].startDate);
       $(".skill__date--endDate").get(i).append(education.schools[i].endDate);
+      $('<p class="majors">' + education.schools[i].majors + '</p>').insertAfter("#degree");
+      $('<a href="' + education.schools[i].url + '" class="skill__name" id="schoolName" target="_blank">'+ education.schools[i].name + '</a>').insertAfter("#vub");
+    }
+    for (var j = 0; j < education.onlineCourses.length; j++) {
+      document.getElementById("date").prepend(education.onlineCourses[j].dates);
+      $('<li id="title"><a href="' + education.onlineCourses[j].url + '"target="_blank">' + education.onlineCourses[j].title + '</a></li>').insertAfter("#date");
+      document.getElementById("school").append(education.onlineCourses[j].school);
     }
   }
 };
