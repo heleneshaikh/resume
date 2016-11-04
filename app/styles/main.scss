@@ -30,14 +30,12 @@ h1 {
   font-size: 3rem;
 }
 
-h2 {
-  color: $light-pink;
-  margin: 0;
-}
-
 a {
-  text-decoration: none;
   color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 img {
@@ -104,12 +102,13 @@ main {
   left: $left;
 }
 
-@mixin work-logos($file, $color) {
+@mixin work-logos($file, $color, $top: 0) {
   &::before {
     background: url('../images/#{$file}.svg') no-repeat center $color;
     @include icon-size(40px, -60px);
     content: '';
     border-radius: 50%;
+    top: $top;
   }
 }
 
@@ -123,12 +122,9 @@ address {
 
   //Logos for methods of contact
   @each $contact-item in $contact-items {
-    .#{$contact-item}--logo {
-      width: 10px;
-      height: 10px;
+    .contact--#{$contact-item} {
       position: relative;
       @include work-logos($contact-item, $pink);
-      @include icon-size(40px, 10px);
     }
   }
 }
@@ -138,6 +134,7 @@ $logos: work, certificates, education;
 
 @each $logo in $logos {
   .skills__#{$logo}--logo {
+    position: relative;
     width: 35px;
     height: 35px;
     @include work-logos($logo, $pink);
@@ -152,6 +149,7 @@ $logos: work, certificates, education;
 }
 
 .skill__name {
+  position: relative;
   @extend %titles;
 }
 
@@ -168,7 +166,7 @@ $logos: work, certificates, education;
     }
     .skill__name::before {
       background: url('../images/bookmark.svg') no-repeat;
-      @include icon-size(17px, -40px, 17px);
+      @include icon-size(17px, -56px, 17px);
       content: '';
       transform: rotate(-90deg);
     }
@@ -182,7 +180,7 @@ $logos: work, certificates, education;
   &__education {
     position: relative;
     .skill__name {
-      @include work-logos($vub, $grey);
+      @include work-logos($vub, $grey, -5px);
     }
   }
 
@@ -215,12 +213,18 @@ $logos: work, certificates, education;
     .skill__name {
       @each $certificate in $certificate-list {
         &--#{$certificate} {
+          position: relative;
           @extend %titles;
-          @include work-logos($certificate, $grey);
+          @include work-logos($certificate, $grey, -5px);
         }
       }
     }
   }
+}
+
+h4 {
+  margin: 0;
+  @extend %titles;
 }
 
 //graphs
@@ -271,7 +275,7 @@ $logos: work, certificates, education;
 .map {
   width: 100%;
   height: 400px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 

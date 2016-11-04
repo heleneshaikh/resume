@@ -13,7 +13,7 @@
     <section class="about">
       <div class="about--portrait">
         <h1 id="name"></h1>
-        <h2 class="h-color-pink" id="role"></h2>
+        <h2 id="role"></h2>
         <picture class="portrait">
           <img src="images/helene.jpg"
                srcset="images/helene.jpg 320w" alt="Helene" sizes="(max-width:550px) 30vw, 18vw">
@@ -21,24 +21,17 @@
       </div>
       <p id="welcome"></p>
       <address>
-        <div class="born--logo"></div>
         <p class="contact--born">
           <span id="born-date"></span><br>
           <span id="born-location"></span>
         </p>
-        <div class="phone--logo"></div>
         <p class="contact--phone">
           <a href="tel:+32498322603" id="phone"></a><br>
           <a href="mailto:blabla@gmail.com" id="mail"></a>
         </p>
-        <div class="address--logo"></div>
-        <div class="contact--address">
+        <p class="contact--address" id="contact">
           <span id="address"></span><br>
           <span id="zipCode"></span>
-        </div>
-        <div class="github--logo"></div>
-        <p class="contact--github">
-          <a href="www.github.com" id="github"></a>
         </p>
       </address>
 
@@ -97,7 +90,6 @@
               <span class="title"></span><br>
               <span class="description"></span></p>
           </li>
-
         </ol>
       </section>
 
@@ -111,7 +103,6 @@
               <time datetime="2011" class="skill__date--endDate"></time>
               <span id="location"></span>
             </div>
-            <!--<a href="" class="skill__name" id="schoolName"></a>-->
             <p class="skill__description" id="degree"></p>
           </li>
         </ol>
@@ -127,6 +118,14 @@
           <li class="skill__name--google" id="google"></li>
           <li class="skill__name--udacity" id="udacity"></li>
         </ol>
+      </section>
+      <section>
+        <time datetime="2016-02" id="time"></time>
+        <h4 id="title"></h4>
+        <p id="description"></p>
+        <picture>
+          <img src="images/bbc.png" alt="bbc project" width="250px" height="180px">
+        </picture>
       </section>
     </section>
   </main>

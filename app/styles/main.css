@@ -20,13 +20,10 @@ h1 {
   margin: 0;
   font-size: 3rem; }
 
-h2 {
-  color: #be2e5e;
-  margin: 0; }
-
 a {
-  text-decoration: none;
   color: inherit; }
+  a:hover {
+    text-decoration: none; }
 
 img {
   max-width: 100%; }
@@ -74,16 +71,9 @@ address {
   margin: 50px 0 50px 50px;
   max-width: 90%;
   position: relative; }
-  address .born--logo {
-    width: 10px;
-    height: 10px;
-    position: relative;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: 10px; }
-    address .born--logo::before {
+  address .contact--born {
+    position: relative; }
+    address .contact--born::before {
       background: url("../images/born.svg") no-repeat center #A12750;
       position: absolute;
       background-size: 25px;
@@ -91,17 +81,11 @@ address {
       width: 40px;
       left: -60px;
       content: '';
-      border-radius: 50%; }
-  address .phone--logo {
-    width: 10px;
-    height: 10px;
-    position: relative;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: 10px; }
-    address .phone--logo::before {
+      border-radius: 50%;
+      top: 0; }
+  address .contact--phone {
+    position: relative; }
+    address .contact--phone::before {
       background: url("../images/phone.svg") no-repeat center #A12750;
       position: absolute;
       background-size: 25px;
@@ -109,17 +93,11 @@ address {
       width: 40px;
       left: -60px;
       content: '';
-      border-radius: 50%; }
-  address .github--logo {
-    width: 10px;
-    height: 10px;
-    position: relative;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: 10px; }
-    address .github--logo::before {
+      border-radius: 50%;
+      top: 0; }
+  address .contact--github {
+    position: relative; }
+    address .contact--github::before {
       background: url("../images/github.svg") no-repeat center #A12750;
       position: absolute;
       background-size: 25px;
@@ -127,17 +105,11 @@ address {
       width: 40px;
       left: -60px;
       content: '';
-      border-radius: 50%; }
-  address .address--logo {
-    width: 10px;
-    height: 10px;
-    position: relative;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: 10px; }
-    address .address--logo::before {
+      border-radius: 50%;
+      top: 0; }
+  address .contact--address {
+    position: relative; }
+    address .contact--address::before {
       background: url("../images/address.svg") no-repeat center #A12750;
       position: absolute;
       background-size: 25px;
@@ -145,9 +117,11 @@ address {
       width: 40px;
       left: -60px;
       content: '';
-      border-radius: 50%; }
+      border-radius: 50%;
+      top: 0; }
 
 .skills__work--logo {
+  position: relative;
   width: 35px;
   height: 35px; }
   .skills__work--logo::before {
@@ -158,9 +132,11 @@ address {
     width: 40px;
     left: -60px;
     content: '';
-    border-radius: 50%; }
+    border-radius: 50%;
+    top: 0; }
 
 .skills__certificates--logo {
+  position: relative;
   width: 35px;
   height: 35px; }
   .skills__certificates--logo::before {
@@ -171,9 +147,11 @@ address {
     width: 40px;
     left: -60px;
     content: '';
-    border-radius: 50%; }
+    border-radius: 50%;
+    top: 0; }
 
 .skills__education--logo {
+  position: relative;
   width: 35px;
   height: 35px; }
   .skills__education--logo::before {
@@ -184,13 +162,17 @@ address {
     width: 40px;
     left: -60px;
     content: '';
-    border-radius: 50%; }
+    border-radius: 50%;
+    top: 0; }
 
-.skill__name, .skills .online #title, .skills__certificates .skill__name--google, .skills__certificates .skill__name--udacity, .skills__certificates .skill__name--oracle {
+.skill__name, .skills .online #title, .skills__certificates .skill__name--google, .skills__certificates .skill__name--udacity, .skills__certificates .skill__name--oracle, h4 {
   color: #A12750;
   font-weight: bold;
   text-transform: uppercase;
   padding-top: 3.2px; }
+
+.skill__name {
+  position: relative; }
 
 .skills__work {
   position: relative; }
@@ -205,7 +187,7 @@ address {
     background-size: 17px;
     height: 17px;
     width: 17px;
-    left: -40px;
+    left: -56px;
     content: '';
     transform: rotate(-90deg); }
   .skills__work span {
@@ -221,7 +203,8 @@ address {
     width: 40px;
     left: -60px;
     content: '';
-    border-radius: 50%; }
+    border-radius: 50%;
+    top: -5px; }
 
 .skills .majors {
   font-style: italic; }
@@ -239,33 +222,45 @@ address {
     margin-bottom: 20px; }
   .skills__certificates ol {
     margin-top: 28.8px; }
-  .skills__certificates .skill__name--google::before {
-    background: url("../images/google.svg") no-repeat center #efefef;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: -60px;
-    content: '';
-    border-radius: 50%; }
-  .skills__certificates .skill__name--udacity::before {
-    background: url("../images/udacity.svg") no-repeat center #efefef;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: -60px;
-    content: '';
-    border-radius: 50%; }
-  .skills__certificates .skill__name--oracle::before {
-    background: url("../images/oracle.svg") no-repeat center #efefef;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: -60px;
-    content: '';
-    border-radius: 50%; }
+  .skills__certificates .skill__name--google {
+    position: relative; }
+    .skills__certificates .skill__name--google::before {
+      background: url("../images/google.svg") no-repeat center #efefef;
+      position: absolute;
+      background-size: 25px;
+      height: 40px;
+      width: 40px;
+      left: -60px;
+      content: '';
+      border-radius: 50%;
+      top: -5px; }
+  .skills__certificates .skill__name--udacity {
+    position: relative; }
+    .skills__certificates .skill__name--udacity::before {
+      background: url("../images/udacity.svg") no-repeat center #efefef;
+      position: absolute;
+      background-size: 25px;
+      height: 40px;
+      width: 40px;
+      left: -60px;
+      content: '';
+      border-radius: 50%;
+      top: -5px; }
+  .skills__certificates .skill__name--oracle {
+    position: relative; }
+    .skills__certificates .skill__name--oracle::before {
+      background: url("../images/oracle.svg") no-repeat center #efefef;
+      position: absolute;
+      background-size: 25px;
+      height: 40px;
+      width: 40px;
+      left: -60px;
+      content: '';
+      border-radius: 50%;
+      top: -5px; }
+
+h4 {
+  margin: 0; }
 
 .title {
   font-weight: bold;
@@ -305,4 +300,4 @@ address {
 .map {
   width: 100%;
   height: 400px;
-  margin-top: 40px; }
+  margin-top: 50px; }

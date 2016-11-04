@@ -79,7 +79,8 @@ var bio = {
     document.getElementById("welcome").append(bio.welcomeMessage);
     document.getElementById("phone").append(bio.contacts[0].mobile);
     document.getElementById("mail").append(bio.contacts[0].email);
-    document.getElementById("github").append(bio.contacts[0].github);
+
+    $('<p class="contact--github"><a href="' + bio.contacts[0].github + '" id="github">Github</a></p>').insertAfter(".contact--address");
     document.getElementById("born-date").append(bio.contacts[0].born.date);
     document.getElementById("born-location").append(bio.contacts[0].born.location);
     document.getElementById("address").append(bio.contacts[0].location.street);
@@ -100,7 +101,7 @@ var work = {
       employer: "RealDolmen",
       title: "Acaddemict Junior Software Developer",
       description: "I was part of the '\Acaddemict\' traject for 2 months. Software developers taught and shared their expertise" +
-      "on the subjects of Java EE, EJBs, JavaScript, Angular, git and XML processing",
+      " on the subjects of Java EE, EJBs, JavaScript, Angular, git and XML processing",
       location: {
         title: "RealDolmen ICT consulting",
         longitude: "50.752922",
@@ -155,13 +156,18 @@ work.display();
 var project = {
   projects: [
     {
-      title: "bla",
-      dates: "bla",
-      description: "bla",
-      images: "bla" //array with string urls
+      title: "BBC",
+      dates: "02-2016",
+      description: "I sliced the homepage of the BBC website",
+      images: "" //array with string urls TODO
     }
   ],
   display: function () {
+    for (var i = 0; i < project.projects.length; i++) {
+      document.getElementById("title").append(project.projects[i].title);
+      document.getElementById("time").append(project.projects[i].dates);
+      document.getElementById("description").append(project.projects[i].description);
+    }
   }
 };
 project.display();
@@ -178,7 +184,7 @@ var education = {
       ],
       startDate: "2006",
       endDate: "2011",
-      url: "https://www.vub.ac.be/" //todo
+      url: "https://www.vub.ac.be/"
     }
   ],
   onlineCourses: [
@@ -191,7 +197,6 @@ var education = {
   ],
   display: function () {
     for (var i = 0; i < education.schools.length; i++) {
-      // document.getElementById("schoolName").append(education.schools[i].name);
       document.getElementById("location").append(education.schools[i].location);
       document.getElementById("degree").append(education.schools[i].degree);
       $(".skill__date--startDate").get(i).append(education.schools[i].startDate);
