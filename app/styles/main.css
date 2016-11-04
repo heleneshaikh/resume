@@ -43,19 +43,20 @@ main {
   padding-top: 40px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 48px; }
+  flex-wrap: wrap; }
   main .about {
-    flex-basis: 35%; }
+    flex-basis: 40%; }
     main .about p:first-of-type {
       margin-bottom: 27px; }
   main .skills {
-    flex-basis: 55%;
+    flex-basis: 50%;
     border-left: 1px dashed #A12750;
     padding-left: 40px; }
     main .skills p {
       margin: 0; }
   @media screen and (max-width: 930px) {
+    main .container {
+      font-size: 4rem; }
     main .about, main .skills {
       flex-basis: 100%; }
     main .skills {
@@ -71,8 +72,7 @@ main {
 
 address {
   font-style: normal;
-  margin-top: 50px;
-  margin-left: 50px;
+  margin: 50px 0 50px 50px;
   max-width: 90%;
   position: relative; }
   address .born--logo {
@@ -91,8 +91,8 @@ address {
       height: 40px;
       width: 40px;
       left: -60px;
-      border-radius: 50%;
-      content: ''; }
+      content: '';
+      border-radius: 50%; }
   address .phone--logo {
     width: 10px;
     height: 10px;
@@ -109,8 +109,8 @@ address {
       height: 40px;
       width: 40px;
       left: -60px;
-      border-radius: 50%;
-      content: ''; }
+      content: '';
+      border-radius: 50%; }
   address .github--logo {
     width: 10px;
     height: 10px;
@@ -127,8 +127,8 @@ address {
       height: 40px;
       width: 40px;
       left: -60px;
-      border-radius: 50%;
-      content: ''; }
+      content: '';
+      border-radius: 50%; }
   address .address--logo {
     width: 10px;
     height: 10px;
@@ -145,8 +145,8 @@ address {
       height: 40px;
       width: 40px;
       left: -60px;
-      border-radius: 50%;
-      content: ''; }
+      content: '';
+      border-radius: 50%; }
 
 .skills__work--logo {
   width: 35px;
@@ -158,8 +158,8 @@ address {
     height: 40px;
     width: 40px;
     left: -60px;
-    border-radius: 50%;
-    content: ''; }
+    content: '';
+    border-radius: 50%; }
 
 .skills__certificates--logo {
   width: 35px;
@@ -171,8 +171,8 @@ address {
     height: 40px;
     width: 40px;
     left: -60px;
-    border-radius: 50%;
-    content: ''; }
+    content: '';
+    border-radius: 50%; }
 
 .skills__education--logo {
   width: 35px;
@@ -184,8 +184,8 @@ address {
     height: 40px;
     width: 40px;
     left: -60px;
-    border-radius: 50%;
-    content: ''; }
+    content: '';
+    border-radius: 50%; }
 
 .skill__name, .skills__certificates .skill__name--google, .skills__certificates .skill__name--udacity, .skills__certificates .skill__name--oracle {
   color: #A12750;
@@ -216,8 +216,8 @@ address {
     height: 40px;
     width: 40px;
     left: -60px;
-    border-radius: 50%;
-    content: ''; }
+    content: '';
+    border-radius: 50%; }
 
 .skills__certificates {
   position: relative;
@@ -233,8 +233,8 @@ address {
     height: 40px;
     width: 40px;
     left: -60px;
-    border-radius: 50%;
-    content: ''; }
+    content: '';
+    border-radius: 50%; }
   .skills__certificates .skill__name--udacity::before {
     background: url("../images/udacity.svg") no-repeat center #efefef;
     position: absolute;
@@ -242,8 +242,8 @@ address {
     height: 40px;
     width: 40px;
     left: -60px;
-    border-radius: 50%;
-    content: ''; }
+    content: '';
+    border-radius: 50%; }
   .skills__certificates .skill__name--oracle::before {
     background: url("../images/oracle.svg") no-repeat center #efefef;
     position: absolute;
@@ -251,8 +251,8 @@ address {
     height: 40px;
     width: 40px;
     left: -60px;
-    border-radius: 50%;
-    content: ''; }
+    content: '';
+    border-radius: 50%; }
 
 .title {
   font-weight: bold;
@@ -262,16 +262,15 @@ address {
   display: flex;
   background-color: white;
   flex-direction: column;
-  margin-left: 20px;
   position: relative; }
 
 .percentage {
   font-size: .8em;
   line-height: 1;
   text-transform: uppercase;
-  width: 85%;
+  width: 75%;
   height: 25px;
-  margin-left: 25%; }
+  margin-left: 90px; }
   .percentage__text {
     font-weight: 600;
     text-align: right;
@@ -293,4 +292,4 @@ address {
 .map {
   width: 100%;
   height: 400px;
-  margin-top: 70px; }
+  margin-top: 40px; }
