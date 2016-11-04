@@ -59,15 +59,14 @@ main {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 48px;
   .about {
-    flex-basis: 35%;
+    flex-basis: 40%;
     p:first-of-type {
       margin-bottom: 27px;
     }
   }
   .skills {
-    flex-basis: 55%;
+    flex-basis: 50%;
     border-left: 1px dashed $pink;
     padding-left: 40px;
     p {
@@ -75,6 +74,9 @@ main {
     }
   }
   @media screen and (max-width: 930px) {
+    .container {
+      font-size: 4rem;
+    }
     .about, .skills {
       flex-basis: 100%;
     }
@@ -106,8 +108,8 @@ main {
   &::before {
     background: url('../images/#{$file}.svg') no-repeat center $color;
     @include icon-size(40px, -60px);
-    border-radius: 50%;
     content: '';
+    border-radius: 50%;
   }
 }
 
@@ -115,8 +117,7 @@ $contact-items: born, phone, github, address;
 
 address {
   font-style: normal;
-  margin-top: 50px;
-  margin-left: 50px;
+  margin: 50px 0 50px 50px;
   max-width: 90%;
   position: relative;
 
@@ -211,7 +212,6 @@ $logos: work, certificates, education;
   display: flex;
   background-color: white;
   flex-direction: column;
-  margin-left: 20px;
   position: relative;
 }
 
@@ -219,9 +219,9 @@ $logos: work, certificates, education;
   font-size: .8em;
   line-height: 1;
   text-transform: uppercase;
-  width: 85%;
+  width: 75%;
   height: 25px;
-  margin-left: 25%;
+  margin-left: 90px;
 
   &__text {
     font-weight: 600;
@@ -249,7 +249,7 @@ $logos: work, certificates, education;
 .map {
   width: 100%;
   height: 400px;
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 
