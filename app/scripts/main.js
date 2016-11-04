@@ -132,6 +132,19 @@ var work = {
         longitude: "50.826926",
         latitude: "4.373203"
       }
+    },
+    {
+      startDate: "2010",
+      endDate: "2015",
+      employer: "Botanique",
+      title: "Internship Press and Communications",
+      description: "At Botanique I had the chance to learn about the workings of the press and communications within a concert venue. I stood in for the guest lists," +
+      "contacting radio stations to increase our ticket sale if needed, writing biographies for the website, etc. ",
+      location: {
+        title: "Botanique concert venue",
+        longitude: "50.854709",
+        latitude: "4.366243"
+      }
     }
   ],
 
