@@ -2,29 +2,40 @@
 
 var locations = [];
 function initMap() {
-  locations = [
-    ["RealDolmen ICT consulting", "50.752922", "4.262945"],
-    ["GroupM advertising agency", "50.817341", "4.405944"],
-    ["Botanique concert venue", "50.854709", "4.366243"],
-    ["Flagey concert venue", "50.826926", "4.373203"],
-    ["Where I live", "50.833822", "4.524999"]
-  ];
-
+  locations.push(["Where I live", "50.833822", "4.524999"]);
   var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 10,
+    scrollwheel: false,
     center: new google.maps.LatLng(50.855171, 4.350326),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
+
+  var house = {
+    path: 'M20 7.093l-3-3v-2.093h3v5.093zm4 5.907h-3v10h-18v-10h-3l12-12 12 12zm-10 2h-4v6h4v-6z',
+  };
 
   var infowindow = new google.maps.InfoWindow();
 
   var marker, i;
 
   for (i = 0; i < locations.length; i++) {
-    marker = new google.maps.Marker({
-      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-      map: map
-    });
+    var b = function () {
+      if (locations[i][1] != "50.833822") {
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map
+        });
+      }
+      else {
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map,
+          icon: house
+        });
+      }
+    };
+
+    b();
 
     google.maps.event.addListener(marker, 'click', (function (marker, i) {
       return function () {
@@ -66,59 +77,65 @@ var bio = {
     document.getElementById("born").append(bio.contacts[0].born);
     document.getElementById("address").append(bio.contacts[0].location.street + bio.contacts[0].location.zip);
     for (var i = 0; i < bio.skills.length; i++) {
-      $(".text").get(i).append(bio.skills[i]);
+      //document.getElementById("graphs")
+      $(".percentage__text").get(i).append(bio.skills[i]);
     }
   }
 };
 bio.display();
 // biopic: string url
-
-
 //WORK DATA
 var work = {
   jobs: [
     {
-      startDate: "2013-2013",
-      endDate: "2013-2013",
+      startDate: "02-2016",
+      endDate: "04-2016",
       employer: "RealDolmen",
-      title: "Trainee Junior Software Developer",
-      description: "Bla bla bla bla bla",
+      title: "Acaddemict Junior Software Developer",
+      description: "I was part of the '\Acaddemict\' traject for 2 months. Software developers taught and shared their expertise" +
+      "on the subjects of Java EE, EJBs, JavaScript, Angular, git and XML processing",
       location: {
+        title: "RealDolmen ICT consulting",
         longitude: "50.752922",
         latitude: "4.262945"
       }
     },
     {
-      startDate: "2013-2013",
-      endDate: "2013-2013",
+      startDate: "09-2013",
+      endDate: "02-2014",
       employer: "GroupM",
       title: "Community Manager",
-      description: "Bla bla bla bla bla",
+      description: "At GroupM, I was responsible for the community management of brands such as Häagen-Dazs, Universal Pictures," +
+      "Paramount Pictures,... This was a job with a lot of independent work and decision-making as I was the only employee responsible for the customer.",
       location: {
+        title: "GroupM advertising agency",
         longitude: "50.817341",
         latitude: "4.405944"
       }
     },
     {
-      startDate: "2013-2013",
-      endDate: "2013-2013",
-      employer: "Botanique",
-      title: "Internship Press and Communications",
-      description: "Bla bla bla bla bla",
-      location: {
-        longitude: "50.854709",
-        latitude: "4.366243"
-      }
-    },
-    {
-      startDate: "2013-2013",
-      endDate: "2013-2013",
+      startDate: "09-2011",
+      endDate: "09-2012",
       employer: "Flagey",
       title: "Assistant Manager and Communications",
       description: "Bla bla bla bla bla",
       location: {
+        title: "Flagey concert venue",
         longitude: "50.826926",
         latitude: "4.373203"
+      }
+    },
+    {
+      startDate: "2010",
+      endDate: "2015",
+      employer: "Botanique",
+      title: "Internship Press and Communications",
+      description: "At Botanique I had the chance to learn about the workings of the press and communications within a concert venue. I stood in for the guest lists," +
+      "contacting radio stations to increase our ticket sale if needed, writing biographies for the website, etc. ",
+      location: {
+        title: "Botanique concert venue",
+        longitude: "50.854709",
+        latitude: "4.366243"
       }
     }
   ],
@@ -130,6 +147,11 @@ var work = {
       $(".endDate").get(i).append(work.jobs[i].endDate);
       $(".title").get(i).append(work.jobs[i].title);
       $(".description").get(i).append(work.jobs[i].description);
+      locations.push([
+        work.jobs[i].location.title,
+        work.jobs[i].location.longitude,
+        work.jobs[i].location.latitude
+      ]);
     }
   }
 };
