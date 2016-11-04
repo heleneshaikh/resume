@@ -84,6 +84,7 @@ var bio = {
 };
 bio.display();
 // biopic: string url
+
 //WORK DATA
 var work = {
   jobs: [
@@ -158,15 +159,15 @@ var school = {
       ],
       startDate: "2006",
       endDate: "2011",
-      url: "https://www.vub.ac.be/"
+      url: "https://www.vub.ac.be/" //todo
     }
   ],
-  onlineCourses: [ //
+  onlineCourses: [
     {
-      title: "bla",
-      school: "bla",
-      dates: "bla",
-      url: "bla"
+      title: "Try Git",
+      school: "CodeSchool",
+      dates: "04-2015",
+      url: "https://www.codeschool.com/courses/try-git"
     }
   ],
   display: function () {
@@ -180,7 +181,6 @@ var school = {
     }
   }
 };
-
 school.display();
 
 //CERTIFICATES DATA
