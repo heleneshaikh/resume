@@ -171,7 +171,7 @@ var project = {
       date: "01-2016",
       description: "I sliced the homepage of the BBC",
       images: [
-        "../images/bbc.png"
+        "images/bbc.png"
       ]
     }
   ],
