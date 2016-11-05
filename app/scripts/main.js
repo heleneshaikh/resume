@@ -2,7 +2,7 @@
 
 var locations = [];
 function initMap() {
-  locations.push(["Where I live", "50.833822", "4.524999"]);
+  locations.push([["Where I live", "50.833822", "4.524999", "home"]]);
   var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 11,
     scrollwheel: false,
@@ -15,8 +15,8 @@ function initMap() {
   var marker, i;
 
   for (i = 0; i < locations.length; i++) {
-    switch (locations[i][1]) {
-      case "50.833822":
+    switch (locations[i][3]) {
+      case "home":
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(locations[i][1], locations[i][2]),
           map: map,
@@ -26,7 +26,7 @@ function initMap() {
           }
         });
         break;
-      case "50.821665":
+      case "school":
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(locations[i][1], locations[i][2]),
           map: map,
@@ -36,10 +36,14 @@ function initMap() {
           }
         });
         break;
-      default:
+      case "work":
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-          map: map
+          map: map,
+          icon: {
+            url: ('../images/workplace.svg'),
+            scaledSize: new google.maps.Size(45, 45)
+          }
         });
     }
 
@@ -69,10 +73,10 @@ var bio = {
       location: "Sint-Lambrechts-Woluwe"
     }
   }],
-  welcomeMessage: "Two years ago, I choose a completely different career path and have been programming ever since. I took a " +
+  welcomeMessage: "Two years ago, I choose a completely different career path and have been programming ever since. I took a" +
   "Java initiation course at the VDAB, passed the Oracle certificate and started a training at RealDolmen as a Junior Software Engineer." +
-  " As an eager learner, I then choose to practice Android Development and received a certificate from Udacity and Google. I am now concentrating" +
-  " on what I love most: front-end development.",
+  "As an eager learner, I then choose to practice Android Development and received a certificate from Udacity and Google. As a front-end and java enthousiast," +
+  "I am looking for a job where I can practice my knowledge and learn a lot of new techniques.",
   skills: [
     "HTML", "CSS", "JavaScript", "Jave EE", "Android", "Git", "English", "French", "Dutch", "Spanish"
   ],
@@ -108,7 +112,8 @@ var work = {
       location: {
         title: "RealDolmen ICT consulting",
         longitude: "50.752922",
-        latitude: "4.262945"
+        latitude: "4.262945",
+        type: "work"
       }
     },
     {
@@ -121,7 +126,8 @@ var work = {
       location: {
         title: "GroupM advertising agency",
         longitude: "50.817341",
-        latitude: "4.405944"
+        latitude: "4.405944",
+        type: "work"
       }
     },
     {
@@ -134,7 +140,8 @@ var work = {
       location: {
         title: "Botanique concert venue",
         longitude: "50.854709",
-        latitude: "4.366243"
+        latitude: "4.366243",
+        type: "work"
       }
     }
   ],
@@ -148,7 +155,8 @@ var work = {
       locations.push([
         work.jobs[i].location.title,
         work.jobs[i].location.longitude,
-        work.jobs[i].location.latitude
+        work.jobs[i].location.latitude,
+        work.jobs[i].location.type
       ]);
     }
   }
@@ -185,7 +193,8 @@ var education = {
       name: "Vrije Universiteit Brussel",
       location: {
         longitude: "50.821665",
-        latitude: "4.394897"
+        latitude: "4.394897",
+        type: "school"
       },
       degree: "Master in Taal-en Letterkunde (cum laude)",
       majors: [
@@ -212,7 +221,8 @@ var education = {
       $(".skill__date--endDate").get(i).append(education.schools[i].endDate);
       locations.push([education.schools[i].name,
         education.schools[i].location.longitude,
-        education.schools[i].location.latitude]);
+        education.schools[i].location.latitude,
+        education.schools[i].location.type]);
     }
   }
 };

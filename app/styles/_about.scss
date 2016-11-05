@@ -1,8 +1,5 @@
 .about {
   flex-basis: 40%;
-  p:first-of-type {
-    margin-bottom: 27px;
-  }
 }
 
 .about--portrait {
@@ -14,28 +11,29 @@
   }
 }
 
-address {
+.contact-info {
   font-style: normal;
   margin: 50px 0 50px 50px;
   max-width: 90%;
   position: relative;
-
+}
+  %contact-info__logo {
+   position: relative;
+  }
   //Logos for methods of contact
   @each $contact-item in $contact-items {
-    .#{$contact-item}--logo {
-      width: 10px;
-      height: 10px;
+    .contact-info__logo--#{$contact-item} {
       position: relative;
-      @include work-logos($contact-item, $pink);
-      @include icon-size(40px, 10px);
+      @extend %contact-info__logo;
+      @include work-logos($contact-item, $pink, -50px);
     }
-  }
+
 }
 
 //graphs
 .title {
   font-weight: bold;
-  color: $light-pink;
+  color: $black;
 }
 
 .graphs {
@@ -43,34 +41,35 @@ address {
   background-color: white;
   flex-direction: column;
   position: relative;
-}
-
-.percentage {
-  font-size: .8em;
-  line-height: 1;
-  text-transform: uppercase;
-  width: 75%;
-  height: 25px;
-  margin-left: 90px;
-
-  &__text {
-    font-weight: 600;
-    text-align: right;
-    height: 30px;
-    width: 100px;
-    position: absolute;
-    left: 0;
-    box-sizing: border-box;
-    padding: 8px 20px 8px 0;
-  }
 
   &__bar {
     display: block;
-    background-color: $pink;
+    background: linear-gradient(
+        to right,
+        $pink, lighten($pink, 15%)
+    );
     margin-bottom: 10px;
     height: 30%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+  }
+
+  .percentage {
+    font-size: .8em;
+    line-height: 1;
+    text-transform: uppercase;
+    width: 75%;
+    height: 25px;
+    margin-left: 90px;
+
+    &__text {
+      font-weight: 600;
+      text-align: right;
+      height: 30px;
+      width: 100px;
+      position: absolute;
+      left: 0;
+      box-sizing: border-box;
+      padding: 8px 20px 8px 0;
+    }
+
   }
 }
