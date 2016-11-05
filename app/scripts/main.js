@@ -21,7 +21,7 @@ function initMap() {
           position: new google.maps.LatLng(locations[i][1], locations[i][2]),
           map: map,
           icon: {
-            url: ('../images/house.svg'),
+            url: ('images/house.svg'),
             scaledSize: new google.maps.Size(45, 45)
           }
         });
@@ -31,7 +31,7 @@ function initMap() {
           position: new google.maps.LatLng(locations[i][1], locations[i][2]),
           map: map,
           icon: {
-            url: ('../images/school.svg'),
+            url: ('images/school.svg'),
             scaledSize: new google.maps.Size(45, 45)
           }
         });
@@ -41,7 +41,7 @@ function initMap() {
           position: new google.maps.LatLng(locations[i][1], locations[i][2]),
           map: map,
           icon: {
-            url: ('../images/workplace.svg'),
+            url: ('images/workplace.svg'),
             scaledSize: new google.maps.Size(45, 45)
           }
         });
