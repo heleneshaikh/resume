@@ -1,6 +1,5 @@
 $pink: #A12750;
-$light-pink: lighten($pink, 7%);
-$lightest-pink: lighten($pink, 55%);
+$black: #000;
 $grey: #efefef;
 $contact-items: born, phone, github, address;
 $logos: work, certificates, education;
@@ -24,17 +23,19 @@ html {
 }
 
 body {
-  max-width: 100%;
   font: 1.6rem "Roboto", sans-serif;
   line-height: 1.5;
+  margin: 0;
+  border-top: 10px solid $pink;
+  padding-bottom: 32px;
+}
+
+p {
   text-align: justify;
-  margin-top: 0;
-  border-top: 5px solid $pink;
-  margin-bottom: 32px;
 }
 
 .container {
-  max-width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -45,7 +46,7 @@ h1 {
 }
 
 h2 {
-  color: $light-pink;
+  color: $black;
   margin: 0;
 }
 
@@ -62,7 +63,7 @@ ol {
   list-style-type: none;
   margin-top: 16px;
   padding: 0;
-  margin-left: 15px;
+  margin-left: 0;
   li {
     margin-bottom: 28.8px;
   }

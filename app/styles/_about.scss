@@ -1,8 +1,5 @@
 .about {
   flex-basis: 40%;
-  p:first-of-type {
-    margin-bottom: 27px;
-  }
 }
 
 .about--portrait {
@@ -14,28 +11,29 @@
   }
 }
 
-address {
+.contact-info {
   font-style: normal;
   margin: 50px 0 50px 50px;
   max-width: 90%;
   position: relative;
+}
 
-  //Logos for methods of contact
-  @each $contact-item in $contact-items {
-    .#{$contact-item}--logo {
-      width: 10px;
-      height: 10px;
-      position: relative;
-      @include work-logos($contact-item, $pink);
-      @include icon-size(40px, 10px);
-    }
+//Logos for methods of contact
+%contact-info__logo {
+  position: relative;
+}
+
+@each $contact-item in $contact-items {
+  .contact-info__logo--#{$contact-item} {
+    @extend %contact-info__logo;
+    @include work-logos($contact-item, $pink, -50px);
   }
 }
 
 //graphs
 .title {
   font-weight: bold;
-  color: $light-pink;
+  color: $black;
 }
 
 .graphs {
@@ -66,7 +64,11 @@ address {
 
   &__bar {
     display: block;
-    background-color: $pink;
+    background:  linear-gradient(
+        to right,
+        $pink, lighten($pink, 15%)
+    );
+
     margin-bottom: 10px;
     height: 30%;
     position: relative;

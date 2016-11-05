@@ -2,12 +2,12 @@
 var locations = [];
 function initMap() {
   locations = [
-    ["Where I live", "50.833822", "4.524999"],
-    ["RealDolmen ICT consulting", "50.752922", "4.262945"],
-    ["GroupM advertising agency", "50.817341", "4.405944"],
-    ["Flagey concert venue", "50.826926", "4.373203"],
-    ["Botanique concert venue", "50.854709", "4.366243"],
-    ["Vrije Universiteit Brussel", "50.821658", "4.394886"]
+    ["Where I live", "50.833822", "4.524999", "home"],
+    ["RealDolmen ICT consulting", "50.752922", "4.262945", "work"],
+    ["GroupM advertising agency", "50.817341", "4.405944", "work"],
+    ["Flagey concert venue", "50.826926", "4.373203", "work"],
+    ["Botanique concert venue", "50.854709", "4.366243", "work"],
+    ["Vrije Universiteit Brussel", "50.821658", "4.394886", "school"]
   ];
 
   var map = new google.maps.Map(document.getElementById("map"), {
@@ -22,8 +22,8 @@ function initMap() {
   var marker, i;
 
   for (i = 0; i < locations.length; i++) {
-    switch (locations[i][1]) {
-      case "50.833822":
+    switch (locations[i][3]) {
+      case "home":
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(locations[i][1], locations[i][2]),
           map: map,
@@ -33,7 +33,7 @@ function initMap() {
           }
         });
         break;
-      case "50.821658":
+      case "school":
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(locations[i][1], locations[i][2]),
           map: map,
@@ -43,10 +43,14 @@ function initMap() {
           }
         });
         break;
-      default:
+      case "work":
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-          map: map
+          map: map,
+          icon: {
+            url: ('../images/workplace.svg'),
+            scaledSize: new google.maps.Size(45, 45)
+          }
         });
     }
 

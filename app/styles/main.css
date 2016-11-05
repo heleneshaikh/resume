@@ -7,8 +7,6 @@
 
 .about {
   flex-basis: 40%; }
-  .about p:first-of-type {
-    margin-bottom: 27px; }
 
 .about--portrait {
   text-align: center;
@@ -17,87 +15,58 @@
     border-radius: 50%;
     margin-top: 20px; }
 
-address {
+.contact-info {
   font-style: normal;
   margin: 50px 0 50px 50px;
   max-width: 90%;
   position: relative; }
-  address .born--logo {
-    width: 10px;
-    height: 10px;
-    position: relative;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: 10px; }
-    address .born--logo::before {
-      background: url("../images/born.svg") no-repeat center #A12750;
-      position: absolute;
-      background-size: 25px;
-      height: 40px;
-      width: 40px;
-      left: -60px;
-      content: '';
-      border-radius: 50%; }
-  address .phone--logo {
-    width: 10px;
-    height: 10px;
-    position: relative;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: 10px; }
-    address .phone--logo::before {
-      background: url("../images/phone.svg") no-repeat center #A12750;
-      position: absolute;
-      background-size: 25px;
-      height: 40px;
-      width: 40px;
-      left: -60px;
-      content: '';
-      border-radius: 50%; }
-  address .github--logo {
-    width: 10px;
-    height: 10px;
-    position: relative;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: 10px; }
-    address .github--logo::before {
-      background: url("../images/github.svg") no-repeat center #A12750;
-      position: absolute;
-      background-size: 25px;
-      height: 40px;
-      width: 40px;
-      left: -60px;
-      content: '';
-      border-radius: 50%; }
-  address .address--logo {
-    width: 10px;
-    height: 10px;
-    position: relative;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: 10px; }
-    address .address--logo::before {
-      background: url("../images/address.svg") no-repeat center #A12750;
-      position: absolute;
-      background-size: 25px;
-      height: 40px;
-      width: 40px;
-      left: -60px;
-      content: '';
-      border-radius: 50%; }
+
+.contact-info__logo--born, .contact-info__logo--phone, .contact-info__logo--github, .contact-info__logo--address {
+  position: relative; }
+
+.contact-info__logo--born::before {
+  background: url("../images/born.svg") no-repeat center #A12750;
+  position: absolute;
+  background-size: 25px;
+  height: 40px;
+  width: 40px;
+  left: -50px;
+  content: '';
+  border-radius: 50%; }
+
+.contact-info__logo--phone::before {
+  background: url("../images/phone.svg") no-repeat center #A12750;
+  position: absolute;
+  background-size: 25px;
+  height: 40px;
+  width: 40px;
+  left: -50px;
+  content: '';
+  border-radius: 50%; }
+
+.contact-info__logo--github::before {
+  background: url("../images/github.svg") no-repeat center #A12750;
+  position: absolute;
+  background-size: 25px;
+  height: 40px;
+  width: 40px;
+  left: -50px;
+  content: '';
+  border-radius: 50%; }
+
+.contact-info__logo--address::before {
+  background: url("../images/address.svg") no-repeat center #A12750;
+  position: absolute;
+  background-size: 25px;
+  height: 40px;
+  width: 40px;
+  left: -50px;
+  content: '';
+  border-radius: 50%; }
 
 .title {
   font-weight: bold;
-  color: #be2e5e; }
+  color: #000; }
 
 .graphs {
   display: flex;
@@ -123,7 +92,7 @@ address {
     padding: 8px 20px 8px 0; }
   .percentage__bar {
     display: block;
-    background-color: #A12750;
+    background: linear-gradient(to right, #A12750, #d14373);
     margin-bottom: 10px;
     height: 30%;
     position: relative;
@@ -138,8 +107,7 @@ address {
     margin: 0; }
 
 .skills__work--logo {
-  width: 35px;
-  height: 35px; }
+  min-height: 35px; }
   .skills__work--logo::before {
     background: url("../images/work.svg") no-repeat center #A12750;
     position: absolute;
@@ -151,8 +119,7 @@ address {
     border-radius: 50%; }
 
 .skills__certificates--logo {
-  width: 35px;
-  height: 35px; }
+  min-height: 35px; }
   .skills__certificates--logo::before {
     background: url("../images/certificates.svg") no-repeat center #A12750;
     position: absolute;
@@ -164,8 +131,7 @@ address {
     border-radius: 50%; }
 
 .skills__education--logo {
-  width: 35px;
-  height: 35px; }
+  min-height: 35px; }
   .skills__education--logo::before {
     background: url("../images/education.svg") no-repeat center #A12750;
     position: absolute;
@@ -193,8 +159,20 @@ address {
 
 .skills__education {
   position: relative; }
-  .skills__education .skill__name::before {
-    background: url("../images/vub.svg") no-repeat center #efefef;
+
+.skills__certificates {
+  position: relative;
+  margin-bottom: 30px; }
+  .skills__certificates li {
+    margin-bottom: 20px;
+    position: relative; }
+  .skills__certificates ol {
+    margin-top: 28.8px; }
+
+.certificate__name--google {
+  position: relative; }
+  .certificate__name--google::before {
+    background: url("../images/google.svg") no-repeat center #efefef;
     position: absolute;
     background-size: 25px;
     height: 40px;
@@ -202,64 +180,67 @@ address {
     left: -60px;
     content: '';
     border-radius: 50%; }
-
-.skills__certificates {
-  position: relative;
-  margin-bottom: 30px; }
-  .skills__certificates li {
-    margin-bottom: 20px; }
-  .skills__certificates ol {
-    margin-top: 28.8px; }
-
-.certificate__name--google::before {
-  background: url("../images/google.svg") no-repeat center #efefef;
-  position: absolute;
-  background-size: 25px;
-  height: 40px;
-  width: 40px;
-  left: -60px;
-  content: '';
-  border-radius: 50%; }
-
-.certificate__name--udacity::before {
-  background: url("../images/udacity.svg") no-repeat center #efefef;
-  position: absolute;
-  background-size: 25px;
-  height: 40px;
-  width: 40px;
-  left: -60px;
-  content: '';
-  border-radius: 50%; }
+  .certificate__name--google::before {
+    top: -7px; }
 
 .certificate__name--oracle::before {
-  background: url("../images/oracle.svg") no-repeat center #efefef;
-  position: absolute;
-  background-size: 25px;
-  height: 40px;
-  width: 40px;
-  left: -60px;
-  content: '';
-  border-radius: 50%; }
+  background-size: 42px; }
+
+.certificate__name--udacity {
+  position: relative; }
+  .certificate__name--udacity::before {
+    background: url("../images/udacity.svg") no-repeat center #efefef;
+    position: absolute;
+    background-size: 25px;
+    height: 40px;
+    width: 40px;
+    left: -60px;
+    content: '';
+    border-radius: 50%; }
+  .certificate__name--udacity::before {
+    top: -7px; }
+
+.certificate__name--oracle::before {
+  background-size: 42px; }
+
+.certificate__name--oracle {
+  position: relative; }
+  .certificate__name--oracle::before {
+    background: url("../images/oracle.svg") no-repeat center #efefef;
+    position: absolute;
+    background-size: 25px;
+    height: 40px;
+    width: 40px;
+    left: -60px;
+    content: '';
+    border-radius: 50%; }
+  .certificate__name--oracle::before {
+    top: -7px; }
+
+.certificate__name--oracle::before {
+  background-size: 42px; }
 
 .map {
   width: 100%;
   height: 400px;
-  margin-top: 40px; }
+  margin-top: 40px;
+  border: 10px solid #efefef; }
 
 html {
   font-size: 62.5%; }
 
 body {
-  max-width: 100%;
   font: 1.6rem "Roboto", sans-serif;
   line-height: 1.5;
-  text-align: justify;
-  margin-top: 0;
-  border-top: 5px solid #A12750;
-  margin-bottom: 32px; }
+  margin: 0;
+  border-top: 10px solid #A12750;
+  padding-bottom: 32px; }
+
+p {
+  text-align: justify; }
 
 .container {
-  max-width: 85%;
+  width: 90%;
   margin: 0 auto; }
 
 h1 {
@@ -268,7 +249,7 @@ h1 {
   font-size: 3rem; }
 
 h2 {
-  color: #be2e5e;
+  color: #000;
   margin: 0; }
 
 a {
@@ -282,7 +263,7 @@ ol {
   list-style-type: none;
   margin-top: 16px;
   padding: 0;
-  margin-left: 15px; }
+  margin-left: 0; }
   ol li {
     margin-bottom: 28.8px; }
 

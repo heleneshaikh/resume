@@ -6,10 +6,10 @@
   left: $left;
 }
 
-@mixin work-logos($file, $color) {
+@mixin work-logos($file, $color, $left: -60px) {
   &::before {
     background: url('../images/#{$file}.svg') no-repeat center $color;
-    @include icon-size(40px, -60px);
+    @include icon-size(40px, $left);
     content: '';
     border-radius: 50%;
   }
