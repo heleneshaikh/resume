@@ -1,9 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
 $pink: #A12750;
 $light-pink: lighten($pink, 7%);
 $lightest-pink: lighten($pink, 55%);
 $grey: #efefef;
+$contact-items: born, phone, github, address;
+$logos: work, certificates, education;
+$certificate-list: google, udacity, oracle;
+
+%titles {
+  color: $pink;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 3.2px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "mixins";
+@import "about";
+@import "skills";
+@import "map";
 
 html {
   font-size: 62.5%;
@@ -57,20 +71,7 @@ main {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  .about {
-    flex-basis: 40%;
-    p:first-of-type {
-      margin-bottom: 27px;
-    }
-  }
-  .skills {
-    flex-basis: 50%;
-    border-left: 1px dashed $pink;
-    padding-left: 40px;
-    p {
-      margin: 0;
-    }
-  }
+
   @media screen and (max-width: 930px) {
     .container {
       font-size: 4rem;
@@ -85,6 +86,7 @@ main {
   }
 }
 
+<<<<<<< HEAD
 .about--portrait {
   text-align: center;
   margin-bottom: 30px;
@@ -279,6 +281,8 @@ h4 {
 }
 
 
+=======
+>>>>>>> complete
 
 
 

@@ -1,0 +1,16 @@
+@mixin icon-size($size, $left, $background-size: 25px) {
+  position: absolute;
+  background-size: $background-size;
+  height: $size;
+  width: $size;
+  left: $left;
+}
+
+@mixin work-logos($file, $color) {
+  &::before {
+    background: url('../images/#{$file}.svg') no-repeat center $color;
+    @include icon-size(40px, -60px);
+    content: '';
+    border-radius: 50%;
+  }
+}

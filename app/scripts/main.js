@@ -4,40 +4,44 @@ var locations = [];
 function initMap() {
   locations.push(["Where I live", "50.833822", "4.524999"]);
   var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 10,
+    zoom: 11,
     scrollwheel: false,
-    center: new google.maps.LatLng(50.8501138, 4.3672145),
+    center: new google.maps.LatLng(50.8052376, 4.3691867),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
-
-  var house = {
-    path: 'M20 7.093l-3-3v-2.093h3v5.093zm4 5.907h-3v10h-18v-10h-3l12-12 12 12zm-10 2h-4v6h4v-6z',
-  };
 
   var infowindow = new google.maps.InfoWindow();
 
   var marker, i;
 
   for (i = 0; i < locations.length; i++) {
-    var b = function () {
-      if (locations[i][1] != "50.833822") {
-        marker = new google.maps.Marker({
-          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-          map: map
-        });
+      switch (locations[i][1]) {
+        case "50.833822":
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map,
+            icon: {
+              url: ('../images/house.svg'),
+              scaledSize: new google.maps.Size(45, 45)
+            }
+          });
+          break;
+        case "50.821665":
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map,
+            icon: {
+              url: ('../images/school.svg'),
+              scaledSize: new google.maps.Size(45, 45)
+            }
+          });
+          break;
+        default:
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map
+          });
       }
-      else {
-        marker = new google.maps.Marker({
-          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-          map: map,
-          icon: {
-            url: ('../images/house.svg'),
-            scaledSize: new google.maps.Size(45, 45)
-          }
-        });
-      }
-    };
-    b();
 
     google.maps.event.addListener(marker, 'click', (function (marker, i) {
       return function () {
@@ -79,7 +83,6 @@ var bio = {
     document.getElementById("welcome").append(bio.welcomeMessage);
     document.getElementById("phone").append(bio.contacts[0].mobile);
     document.getElementById("mail").append(bio.contacts[0].email);
-
     $('<p class="contact--github"><a href="' + bio.contacts[0].github + '" id="github">Github</a></p>').insertAfter(".contact--address");
     document.getElementById("born-date").append(bio.contacts[0].born.date);
     document.getElementById("born-location").append(bio.contacts[0].born.location);
@@ -132,10 +135,22 @@ var work = {
         title: "Flagey concert venue",
         longitude: "50.826926",
         latitude: "4.373203"
+      },
+    },
+    {
+      startDate: "2010",
+      endDate: "2015",
+      employer: "Botanique",
+      title: "Internship Press and Communications",
+      description: "At Botanique I had the chance to learn about the workings of the press and communications within a concert venue. I stood in for the guest lists," +
+      "contacting radio stations to increase our ticket sale if needed, writing biographies for the website, etc. ",
+      location: {
+        title: "Botanique concert venue",
+        longitude: "50.854709",
+        latitude: "4.366243"
       }
     }
   ],
-
   display: function () {
     for (var i = 0; i < work.jobs.length; i++) {
       $(".employer").get(i).append(work.jobs[i].employer);
@@ -157,9 +172,11 @@ var project = {
   projects: [
     {
       title: "BBC",
-      dates: "02-2016",
-      description: "I sliced the homepage of the BBC website",
-      images: "" //array with string urls TODO
+      dates: "01-2016",
+      description: "I sliced the homepage of the BBC",
+      images: [
+        "bbc.png"
+      ] //array with string urls
     }
   ],
   display: function () {
@@ -177,7 +194,10 @@ var education = {
   schools: [
     {
       name: "Vrije Universiteit Brussel",
-      location: "Woluwe",
+      location: {
+        longitude: "50.821665",
+        latitude: "4.394897"
+      },
       degree: "Master in Taal-en Letterkunde (cum laude)",
       majors: [
         "Spanish", " Dutch", " English", " Philosophy"
@@ -208,6 +228,9 @@ var education = {
       document.getElementById("date").prepend(education.onlineCourses[j].dates);
       $('<li id="title"><a href="' + education.onlineCourses[j].url + '"target="_blank">' + education.onlineCourses[j].title + '</a></li>').insertAfter("#date");
       document.getElementById("school").append(education.onlineCourses[j].school);
+      locations.push([education.schools[i].name,
+                      education.schools[i].location.longitude,
+                      education.schools[i].location.latitude]);
     }
   }
 };
