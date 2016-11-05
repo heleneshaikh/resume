@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-.skill__name, .certificate__name--google, .certificate__name--udacity, .certificate__name--oracle, .skills .online #title, .skills__certificates .skill__name--google, .skills__certificates .skill__name--udacity, .skills__certificates .skill__name--oracle, h4 {
+.skill__name, .certificate__name--google, .certificate__name--udacity, .certificate__name--oracle {
   color: #A12750;
   font-weight: bold;
   text-transform: uppercase;
@@ -251,7 +251,7 @@ html {
 
 body {
   max-width: 100%;
-  font: 1.5rem "Roboto", sans-serif;
+  font: 1.6rem "Roboto", sans-serif;
   line-height: 1.5;
   text-align: justify;
   margin-top: 0;
@@ -267,20 +267,24 @@ h1 {
   margin: 0;
   font-size: 3rem; }
 
+h2 {
+  color: #be2e5e;
+  margin: 0; }
+
 a {
-  color: inherit; }
-  a:hover {
-    text-decoration: none; }
+  text-decoration: none;
+  color: black; }
 
 img {
   max-width: 100%; }
 
 ol {
   list-style-type: none;
+  margin-top: 16px;
   padding: 0;
-  margin: 0; }
+  margin-left: 15px; }
   ol li {
-    margin: 0; }
+    margin-bottom: 28.8px; }
 
 main {
   padding-top: 40px;
@@ -295,246 +299,3 @@ main {
     main .skills {
       margin-top: 50px;
       margin-left: 20px; } }
-
-.about--portrait {
-  text-align: center;
-  margin-bottom: 30px; }
-  .about--portrait img {
-    border-radius: 50%;
-    margin-top: 20px; }
-
-address {
-  font-style: normal;
-  margin: 50px 0 50px 50px;
-  max-width: 90%;
-  position: relative; }
-  address .contact--born {
-    position: relative; }
-    address .contact--born::before {
-      background: url("../images/born.svg") no-repeat center #A12750;
-      position: absolute;
-      background-size: 25px;
-      height: 40px;
-      width: 40px;
-      left: -60px;
-      content: '';
-      border-radius: 50%;
-      top: 0; }
-  address .contact--phone {
-    position: relative; }
-    address .contact--phone::before {
-      background: url("../images/phone.svg") no-repeat center #A12750;
-      position: absolute;
-      background-size: 25px;
-      height: 40px;
-      width: 40px;
-      left: -60px;
-      content: '';
-      border-radius: 50%;
-      top: 0; }
-  address .contact--github {
-    position: relative; }
-    address .contact--github::before {
-      background: url("../images/github.svg") no-repeat center #A12750;
-      position: absolute;
-      background-size: 25px;
-      height: 40px;
-      width: 40px;
-      left: -60px;
-      content: '';
-      border-radius: 50%;
-      top: 0; }
-  address .contact--address {
-    position: relative; }
-    address .contact--address::before {
-      background: url("../images/address.svg") no-repeat center #A12750;
-      position: absolute;
-      background-size: 25px;
-      height: 40px;
-      width: 40px;
-      left: -60px;
-      content: '';
-      border-radius: 50%;
-      top: 0; }
-
-.skills__work--logo {
-  position: relative;
-  width: 35px;
-  height: 35px; }
-  .skills__work--logo::before {
-    background: url("../images/work.svg") no-repeat center #A12750;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: -60px;
-    content: '';
-    border-radius: 50%;
-    top: 0; }
-
-.skills__certificates--logo {
-  position: relative;
-  width: 35px;
-  height: 35px; }
-  .skills__certificates--logo::before {
-    background: url("../images/certificates.svg") no-repeat center #A12750;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: -60px;
-    content: '';
-    border-radius: 50%;
-    top: 0; }
-
-.skills__education--logo {
-  position: relative;
-  width: 35px;
-  height: 35px; }
-  .skills__education--logo::before {
-    background: url("../images/education.svg") no-repeat center #A12750;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: -60px;
-    content: '';
-    border-radius: 50%;
-    top: 0; }
-
-.skill__name, .certificate__name--google, .certificate__name--udacity, .certificate__name--oracle, .skills .online #title, .skills__certificates .skill__name--google, .skills__certificates .skill__name--udacity, .skills__certificates .skill__name--oracle, h4 {
-  color: #A12750;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding-top: 3.2px; }
-
-.skill__name {
-  position: relative; }
-
-.skills__work {
-  position: relative; }
-  .skills__work ol {
-    margin-top: 16px;
-    margin-left: 15px; }
-    .skills__work ol li {
-      margin-bottom: 28.8px; }
-  .skills__work .skill__name::before {
-    background: url("../images/bookmark.svg") no-repeat;
-    position: absolute;
-    background-size: 17px;
-    height: 17px;
-    width: 17px;
-    left: -56px;
-    content: '';
-    transform: rotate(-90deg); }
-  .skills__work span {
-    display: inline-block; }
-
-.skills__education {
-  position: relative; }
-  .skills__education .skill__name::before {
-    background: url("../images/vub.svg") no-repeat center #efefef;
-    position: absolute;
-    background-size: 25px;
-    height: 40px;
-    width: 40px;
-    left: -60px;
-    content: '';
-    border-radius: 50%;
-    top: -5px; }
-
-.skills .majors {
-  font-style: italic; }
-
-.skills .online {
-  margin-top: 20px;
-  margin-bottom: 20px; }
-  .skills .online #school {
-    font-style: italic; }
-
-.skills__certificates {
-  position: relative;
-  margin-bottom: 30px; }
-  .skills__certificates li {
-    margin-bottom: 20px; }
-  .skills__certificates ol {
-    margin-top: 28.8px; }
-  .skills__certificates .skill__name--google {
-    position: relative; }
-    .skills__certificates .skill__name--google::before {
-      background: url("../images/google.svg") no-repeat center #efefef;
-      position: absolute;
-      background-size: 25px;
-      height: 40px;
-      width: 40px;
-      left: -60px;
-      content: '';
-      border-radius: 50%;
-      top: -5px; }
-  .skills__certificates .skill__name--udacity {
-    position: relative; }
-    .skills__certificates .skill__name--udacity::before {
-      background: url("../images/udacity.svg") no-repeat center #efefef;
-      position: absolute;
-      background-size: 25px;
-      height: 40px;
-      width: 40px;
-      left: -60px;
-      content: '';
-      border-radius: 50%;
-      top: -5px; }
-  .skills__certificates .skill__name--oracle {
-    position: relative; }
-    .skills__certificates .skill__name--oracle::before {
-      background: url("../images/oracle.svg") no-repeat center #efefef;
-      position: absolute;
-      background-size: 25px;
-      height: 40px;
-      width: 40px;
-      left: -60px;
-      content: '';
-      border-radius: 50%;
-      top: -5px; }
-
-h4 {
-  margin: 0; }
-
-.title {
-  font-weight: bold;
-  color: #be2e5e; }
-
-.graphs {
-  display: flex;
-  background-color: white;
-  flex-direction: column;
-  position: relative; }
-
-.percentage {
-  font-size: .8em;
-  line-height: 1;
-  text-transform: uppercase;
-  width: 75%;
-  height: 25px;
-  margin-left: 90px; }
-  .percentage__text {
-    font-weight: 600;
-    text-align: right;
-    height: 30px;
-    width: 100px;
-    position: absolute;
-    left: 0;
-    box-sizing: border-box;
-    padding: 8px 20px 8px 0; }
-  .percentage__bar {
-    display: block;
-    background-color: #A12750;
-    margin-bottom: 10px;
-    height: 30%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%); }
-
-.map {
-  width: 100%;
-  height: 400px;
-  margin-top: 50px; }

@@ -25,7 +25,7 @@ html {
 
 body {
   max-width: 100%;
-  font: 1.5rem "Roboto", sans-serif;
+  font: 1.6rem "Roboto", sans-serif;
   line-height: 1.5;
   text-align: justify;
   margin-top: 0;
@@ -44,12 +44,14 @@ h1 {
   font-size: 3rem;
 }
 
-a {
-  color: inherit;
+h2 {
+  color: $light-pink;
+  margin: 0;
+}
 
-  &:hover {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+  color: black;
 }
 
 img {
@@ -58,13 +60,13 @@ img {
 
 ol {
   list-style-type: none;
+  margin-top: 16px;
   padding: 0;
-  margin: 0;
+  margin-left: 15px;
   li {
-    margin: 0;
+    margin-bottom: 28.8px;
   }
 }
-
 
 main {
   padding-top: 40px;
@@ -85,202 +87,3 @@ main {
     }
   }
 }
-
-.about--portrait {
-  text-align: center;
-  margin-bottom: 30px;
-  img {
-    border-radius: 50%;
-    margin-top: 20px;
-  }
-}
-
-@mixin icon-size($size, $left, $background-size: 25px) {
-  position: absolute;
-  background-size: $background-size;
-  height: $size;
-  width: $size;
-  left: $left;
-}
-
-@mixin work-logos($file, $color, $top: 0) {
-  &::before {
-    background: url('../images/#{$file}.svg') no-repeat center $color;
-    @include icon-size(40px, -60px);
-    content: '';
-    border-radius: 50%;
-    top: $top;
-  }
-}
-
-$contact-items: born, phone, github, address;
-
-address {
-  font-style: normal;
-  margin: 50px 0 50px 50px;
-  max-width: 90%;
-  position: relative;
-
-  //Logos for methods of contact
-  @each $contact-item in $contact-items {
-    .contact--#{$contact-item} {
-      position: relative;
-      @include work-logos($contact-item, $pink);
-    }
-  }
-}
-
-//Category logos
-$logos: work, certificates, education;
-
-@each $logo in $logos {
-  .skills__#{$logo}--logo {
-    position: relative;
-    width: 35px;
-    height: 35px;
-    @include work-logos($logo, $pink);
-  }
-}
-
-%titles {
-  color: $pink;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding-top: 3.2px;
-}
-
-.skill__name {
-  position: relative;
-  @extend %titles;
-}
-
-//Bookmarks
-.skills {
-  &__work {
-    position: relative;
-    ol {
-      margin-top: 16px;
-      margin-left: 15px;
-      li {
-        margin-bottom: 28.8px;
-      }
-    }
-    .skill__name::before {
-      background: url('../images/bookmark.svg') no-repeat;
-      @include icon-size(17px, -56px, 17px);
-      content: '';
-      transform: rotate(-90deg);
-    }
-    span {
-      display: inline-block;
-    }
-  }
-
-  //vub logo
-  $vub: vub;
-  &__education {
-    position: relative;
-    .skill__name {
-      @include work-logos($vub, $grey, -5px);
-    }
-  }
-
-  .majors {
-    font-style: italic;
-  }
-
-  .online {
-    margin-top:20px;
-    margin-bottom:20px;
-    #title {
-    @extend %titles;
-    }
-    #school {
-      font-style: italic;
-    }
-  }
-
-  //certificate logos
-  $certificate-list: google, udacity, oracle;
-  &__certificates {
-    position: relative;
-    margin-bottom: 30px;
-    li {
-      margin-bottom: 20px;
-    }
-    ol {
-      margin-top: 28.8px;
-    }
-    .skill__name {
-      @each $certificate in $certificate-list {
-        &--#{$certificate} {
-          position: relative;
-          @extend %titles;
-          @include work-logos($certificate, $grey, -5px);
-        }
-      }
-    }
-  }
-}
-
-h4 {
-  margin: 0;
-  @extend %titles;
-}
-
-//graphs
-
-.title {
-  font-weight: bold;
-  color: $light-pink;
-}
-
-.graphs {
-  display: flex;
-  background-color: white;
-  flex-direction: column;
-  position: relative;
-}
-
-.percentage {
-  font-size: .8em;
-  line-height: 1;
-  text-transform: uppercase;
-  width: 75%;
-  height: 25px;
-  margin-left: 90px;
-
-  &__text {
-    font-weight: 600;
-    text-align: right;
-    height: 30px;
-    width: 100px;
-    position: absolute;
-    left: 0;
-    box-sizing: border-box;
-    padding: 8px 20px 8px 0;
-  }
-
-  &__bar {
-    display: block;
-    background-color: $pink;
-    margin-bottom: 10px;
-    height: 30%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
-//google maps
-.map {
-  width: 100%;
-  height: 400px;
-  margin-top: 50px;
-}
-
-
-
-
-
-

@@ -21,15 +21,10 @@
       </div>
       <p id="welcome"></p>
       <address>
-        <p class="contact--born">
-          <span id="born-date"></span><br>
-          <span id="born-location"></span>
-        </p>
-        <p class="contact--phone">
         <div class="born--logo"></div>
         <p>
-          <span id="contact-date"></span><br>
-          <span id="contact-location"></span>
+          <span id="born-date"></span><br>
+          <span id="born-location"></span>
         </p>
         <div class="phone--logo"></div>
         <p>
@@ -50,16 +45,26 @@
       <section>
         <dl id="graphs" class="graphs">
           <dt></dt>
-          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar" style="width: 80%"></span></dd>
-          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar" style="width: 75%"></span></dd>
-          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar" style="width: 60%"></span></dd>
-          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar" style="width: 60%"></span></dd>
-          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar" style="width: 70%"></span></dd>
-          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar" style="width: 70%"></span></dd>
-          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar" style="width: 90%"></span></dd>
-          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar" style="width: 90%"></span></dd>
-          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar" style="width: 90%"></span></dd>
-          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar" style="width: 60%"></span></dd>
+          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar"
+                                                                             style="width: 80%"></span></dd>
+          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar"
+                                                                             style="width: 75%"></span></dd>
+          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar"
+                                                                             style="width: 60%"></span></dd>
+          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar"
+                                                                             style="width: 60%"></span></dd>
+          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar"
+                                                                             style="width: 70%"></span></dd>
+          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar"
+                                                                             style="width: 70%"></span></dd>
+          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar"
+                                                                             style="width: 90%"></span></dd>
+          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar"
+                                                                             style="width: 90%"></span></dd>
+          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar"
+                                                                             style="width: 90%"></span></dd>
+          <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar"
+                                                                             style="width: 60%"></span></dd>
         </dl>
       </section>
 
@@ -105,28 +110,23 @@
             <time datetime="2006" class="skill__date--startDate"></time>
             -
             <time datetime="2011" class="skill__date--endDate"></time>
+            <br>
             <span id="location"></span>
             <a href="" class="skill__name" id="schoolName"></a>
             <p class="skill__description" id="degree"></p>
           </li>
         </ol>
-        <ol class="online">
-          <li id="date"></li>
-          <li id="school">by </li>
+      </section>
+      <section class="skills_projects">
+        <ol>
+          <li>
+            <time datetime="2006" class="project__date"></time>
+            <p class="skill__name" id="title"></p>
+            <p id="project__description"></p>
+            <img src="" alt="" id="project__image" width="250" height="170px">
+          </li>
         </ol>
       </section>
-      <!--<section class="skills_projects">-->
-        <!--<ol>-->
-          <!--<li>-->
-            <!--<time datetime="2006" class="skill__date&#45;&#45;startDate"></time>-->
-             <!-- - -->
-            <!--<time datetime="2011" class="skill__date&#45;&#45;endDate"></time>-->
-            <!--<p id="title"></p>-->
-            <!--<p class="skill__description"></p>-->
-          <!--</li>-->
-        <!--</ol>-->
-
-      <!--</section>-->
       <section class="skills__certificates">
         <div class="skills__certificates--logo"></div>
         <ol>
@@ -135,19 +135,10 @@
           <li class="certificate__name--udacity" id="udacity"></li>
         </ol>
       </section>
-      <section>
-        <time datetime="2016-02" id="time"></time>
-        <h4 id="title"></h4>
-        <p id="description"></p>
-        <picture>
-          <img src="images/bbc.png" alt="bbc project" width="250px" height="180px">
-        </picture>
-      </section>
     </section>
   </main>
   <aside>
     <div id="map" class="map"></div>
-
   </aside>
 </div>
 <script

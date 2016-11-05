@@ -15,33 +15,33 @@ function initMap() {
   var marker, i;
 
   for (i = 0; i < locations.length; i++) {
-      switch (locations[i][1]) {
-        case "50.833822":
-          marker = new google.maps.Marker({
-            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-            map: map,
-            icon: {
-              url: ('../images/house.svg'),
-              scaledSize: new google.maps.Size(45, 45)
-            }
-          });
-          break;
-        case "50.821665":
-          marker = new google.maps.Marker({
-            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-            map: map,
-            icon: {
-              url: ('../images/school.svg'),
-              scaledSize: new google.maps.Size(45, 45)
-            }
-          });
-          break;
-        default:
-          marker = new google.maps.Marker({
-            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-            map: map
-          });
-      }
+    switch (locations[i][1]) {
+      case "50.833822":
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map,
+          icon: {
+            url: ('../images/house.svg'),
+            scaledSize: new google.maps.Size(45, 45)
+          }
+        });
+        break;
+      case "50.821665":
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map,
+          icon: {
+            url: ('../images/school.svg'),
+            scaledSize: new google.maps.Size(45, 45)
+          }
+        });
+        break;
+      default:
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map
+        });
+    }
 
     google.maps.event.addListener(marker, 'click', (function (marker, i) {
       return function () {
@@ -55,7 +55,7 @@ function initMap() {
 //BIO DATA
 var bio = {
   name: "Helene Shaikh",
-  role: "Junior Front-End & Java Developer",
+  role: "Jr Front-End Developer",
   contacts: [{
     mobile: "+32 498 322 603",
     email: "helene.shaikh@gmail.com",
@@ -83,7 +83,7 @@ var bio = {
     document.getElementById("welcome").append(bio.welcomeMessage);
     document.getElementById("phone").append(bio.contacts[0].mobile);
     document.getElementById("mail").append(bio.contacts[0].email);
-    $('<p class="contact--github"><a href="' + bio.contacts[0].github + '" id="github">Github</a></p>').insertAfter(".contact--address");
+    document.getElementById("github").append(bio.contacts[0].github);
     document.getElementById("born-date").append(bio.contacts[0].born.date);
     document.getElementById("born-location").append(bio.contacts[0].born.location);
     document.getElementById("address").append(bio.contacts[0].location.street);
@@ -104,7 +104,7 @@ var work = {
       employer: "RealDolmen",
       title: "Acaddemict Junior Software Developer",
       description: "I was part of the '\Acaddemict\' traject for 2 months. Software developers taught and shared their expertise" +
-      " on the subjects of Java EE, EJBs, JavaScript, Angular, git and XML processing",
+      "on the subjects of Java EE, EJBs, JavaScript, Angular, git and XML processing",
       location: {
         title: "RealDolmen ICT consulting",
         longitude: "50.752922",
@@ -123,19 +123,6 @@ var work = {
         longitude: "50.817341",
         latitude: "4.405944"
       }
-    },
-    {
-      startDate: "09-2011",
-      endDate: "09-2012",
-      employer: "Flagey",
-      title: "Assistant Manager and Communications",
-      description: "Flagey was my first real work experience and it was immediately a challenging one. I had the chance to have three different functions," +
-      "which taught me a lot about multitasking, attention to detail and responsibility. I was the manager's assistant, communications employee and receptionist",
-      location: {
-        title: "Flagey concert venue",
-        longitude: "50.826926",
-        latitude: "4.373203"
-      },
     },
     {
       startDate: "2010",
@@ -168,22 +155,24 @@ var work = {
 };
 work.display();
 
+// //PROJECTS
 var project = {
   projects: [
     {
       title: "BBC",
-      dates: "01-2016",
+      date: "01-2016",
       description: "I sliced the homepage of the BBC",
       images: [
-        "bbc.png"
-      ] //array with string urls
+        "../images/bbc.png"
+      ]
     }
   ],
   display: function () {
     for (var i = 0; i < project.projects.length; i++) {
       document.getElementById("title").append(project.projects[i].title);
-      document.getElementById("time").append(project.projects[i].dates);
-      document.getElementById("description").append(project.projects[i].description);
+      $(".project__date").get(i).append(project.projects[i].date);
+      document.getElementById("project__description").append(project.projects[i].description);
+      document.getElementById("project__image").src = project.projects[i].images[0];
     }
   }
 };
@@ -200,11 +189,11 @@ var education = {
       },
       degree: "Master in Taal-en Letterkunde (cum laude)",
       majors: [
-        "Spanish", " Dutch", " English", " Philosophy"
+        "spanish", "dutch", "english", "philosophy"
       ],
       startDate: "2006",
       endDate: "2011",
-      url: "https://www.vub.ac.be/"
+      url: "https://www.vub.ac.be/" //todo
     }
   ],
   onlineCourses: [
@@ -217,20 +206,13 @@ var education = {
   ],
   display: function () {
     for (var i = 0; i < education.schools.length; i++) {
-      document.getElementById("location").append(education.schools[i].location);
+      document.getElementById("schoolName").append(education.schools[i].name);
       document.getElementById("degree").append(education.schools[i].degree);
       $(".skill__date--startDate").get(i).append(education.schools[i].startDate);
       $(".skill__date--endDate").get(i).append(education.schools[i].endDate);
-      $('<p class="majors">' + education.schools[i].majors + '</p>').insertAfter("#degree");
-      $('<a href="' + education.schools[i].url + '" class="skill__name" id="schoolName" target="_blank">'+ education.schools[i].name + '</a>').insertAfter("#vub");
-    }
-    for (var j = 0; j < education.onlineCourses.length; j++) {
-      document.getElementById("date").prepend(education.onlineCourses[j].dates);
-      $('<li id="title"><a href="' + education.onlineCourses[j].url + '"target="_blank">' + education.onlineCourses[j].title + '</a></li>').insertAfter("#date");
-      document.getElementById("school").append(education.onlineCourses[j].school);
       locations.push([education.schools[i].name,
-                      education.schools[i].location.longitude,
-                      education.schools[i].location.latitude]);
+        education.schools[i].location.longitude,
+        education.schools[i].location.latitude]);
     }
   }
 };
