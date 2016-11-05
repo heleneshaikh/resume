@@ -4,40 +4,44 @@ var locations = [];
 function initMap() {
   locations.push(["Where I live", "50.833822", "4.524999"]);
   var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 10,
+    zoom: 11,
     scrollwheel: false,
-    center: new google.maps.LatLng(50.8501138, 4.3672145),
+    center: new google.maps.LatLng(50.8052376, 4.3691867),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
-
-  var house = {
-    path: 'M20 7.093l-3-3v-2.093h3v5.093zm4 5.907h-3v10h-18v-10h-3l12-12 12 12zm-10 2h-4v6h4v-6z',
-  };
 
   var infowindow = new google.maps.InfoWindow();
 
   var marker, i;
 
   for (i = 0; i < locations.length; i++) {
-    var b = function () {
-      if (locations[i][1] != "50.833822") {
-        marker = new google.maps.Marker({
-          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-          map: map
-        });
+      switch (locations[i][1]) {
+        case "50.833822":
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map,
+            icon: {
+              url: ('../images/house.svg'),
+              scaledSize: new google.maps.Size(45, 45)
+            }
+          });
+          break;
+        case "50.821665":
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map,
+            icon: {
+              url: ('../images/school.svg'),
+              scaledSize: new google.maps.Size(45, 45)
+            }
+          });
+          break;
+        default:
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map
+          });
       }
-      else {
-        marker = new google.maps.Marker({
-          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-          map: map,
-          icon: {
-            url: ('../images/house.svg'),
-            scaledSize: new google.maps.Size(45, 45)
-          }
-        });
-      }
-    };
-    b();
 
     google.maps.event.addListener(marker, 'click', (function (marker, i) {
       return function () {
@@ -121,19 +125,6 @@ var work = {
       }
     },
     {
-      startDate: "09-2011",
-      endDate: "09-2012",
-      employer: "Flagey",
-      title: "Assistant Manager and Communications",
-      description: "Flagey was my first real work experience and it was immediately a challenging one. I had the chance to have three different functions," +
-      "which taught me a lot about multitasking, attention to detail and responsibility. I was the manager's assistant, communications employee and receptionist",
-      location: {
-        title: "Flagey concert venue",
-        longitude: "50.826926",
-        latitude: "4.373203"
-      }
-    },
-    {
       startDate: "2010",
       endDate: "2015",
       employer: "Botanique",
@@ -147,7 +138,6 @@ var work = {
       }
     }
   ],
-
   display: function () {
     for (var i = 0; i < work.jobs.length; i++) {
       $(".employer").get(i).append(work.jobs[i].employer);
@@ -168,13 +158,18 @@ work.display();
 var project = {
   projects: [
     {
-      title: "bla",
-      dates: "bla",
-      description: "bla",
-      images: "bla" //array with string urls
+      title: "BBC",
+      dates: "01-2016",
+      description: "I sliced the homepage of the BBC",
+      images: [
+        "bbc.png"
+      ] //array with string urls
     }
   ],
   display: function () {
+    for (var i = 0; i < project.projects.length; i++) {
+
+    }
   }
 };
 project.display();
@@ -184,17 +179,20 @@ var education = {
   schools: [
     {
       name: "Vrije Universiteit Brussel",
-      location: "Woluwe",
+      location: {
+        longitude: "50.821665",
+        latitude: "4.394897"
+      },
       degree: "Master in Taal-en Letterkunde (cum laude)",
       majors: [
-        "spanish", "dutch", "english", "philosophy" //TODO
+        "spanish", "dutch", "english", "philosophy"
       ],
       startDate: "2006",
       endDate: "2011",
       url: "https://www.vub.ac.be/" //todo
     }
   ],
-  onlineCourses: [ //TODO
+  onlineCourses: [
     {
       title: "Try Git",
       school: "CodeSchool",
@@ -209,6 +207,9 @@ var education = {
       document.getElementById("degree").append(education.schools[i].degree);
       $(".skill__date--startDate").get(i).append(education.schools[i].startDate);
       $(".skill__date--endDate").get(i).append(education.schools[i].endDate);
+      locations.push([education.schools[i].name,
+                      education.schools[i].location.longitude,
+                      education.schools[i].location.latitude]);
     }
   }
 };

@@ -1,0 +1,64 @@
+.skills {
+  flex-basis: 50%;
+  border-left: 1px dashed $pink;
+  padding-left: 40px;
+  p {
+    margin: 0;
+  }
+}
+
+//Main categories logos
+@each $logo in $logos {
+  .skills__#{$logo}--logo {
+    width: 35px;
+    height: 35px;
+    @include work-logos($logo, $pink);
+  }
+}
+
+.skill__name {
+  @extend %titles;
+}
+
+.skill__name::before {
+  background: url('../images/bookmark.svg') no-repeat;
+  @include icon-size(17px, -40px, 17px);
+  content: '';
+  transform: rotate(-90deg);
+}
+
+//Bookmarks
+.skills__work {
+  position: relative;
+  span {
+    display: inline-block;
+  }
+}
+
+//vub logo
+.skills__education {
+  position: relative;
+  .skill__name {
+    @include work-logos("vub", $grey);
+  }
+}
+
+.skills__certificates {
+  position: relative;
+  margin-bottom: 30px;
+  li {
+    margin-bottom: 20px;
+  }
+  ol {
+    margin-top: 28.8px;
+  }
+}
+
+.certificate__name {
+  @each $certificate in $certificate-list {
+    &--#{$certificate} {
+      @extend %titles;
+      @include work-logos($certificate, $grey);
+    }
+  }
+}

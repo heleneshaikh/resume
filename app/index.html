@@ -2,7 +2,7 @@
 <html lang="">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="">
+  <meta name="description" content="Helene Shaikh resume">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Helene Shaikh</title>
   <link rel="stylesheet" href="styles/main.css">
@@ -13,7 +13,7 @@
     <section class="about">
       <div class="about--portrait">
         <h1 id="name"></h1>
-        <h2 class="h-color-pink" id="role"></h2>
+        <h2 id="role"></h2>
         <picture class="portrait">
           <img src="images/helene.jpg"
                srcset="images/helene.jpg 320w" alt="Helene" sizes="(max-width:550px) 30vw, 18vw">
@@ -22,28 +22,27 @@
       <p id="welcome"></p>
       <address>
         <div class="born--logo"></div>
-        <p class="contact--born">
+        <p>
           <span id="born-date"></span><br>
           <span id="born-location"></span>
         </p>
         <div class="phone--logo"></div>
-        <p class="contact--phone">
+        <p>
           <a href="tel:+32498322603" id="phone"></a><br>
-          <a href="mailto:blabla@gmail.com" id="mail"></a>
+          <a href="mailto:helene.shaikh@gmail.com" id="mail"></a>
         </p>
         <div class="address--logo"></div>
-        <div class="contact--address">
+        <div>
           <span id="address"></span><br>
           <span id="zipCode"></span>
         </div>
         <div class="github--logo"></div>
-        <p class="contact--github">
-         <a href="www.github.com" id="github"></a>
+        <p>
+          <a href="www.github.com" id="github"></a>
         </p>
       </address>
 
-      <section class="skills__graph">
-        <div class="skills__graph--logo"></div>
+      <section>
         <dl id="graphs" class="graphs">
           <dt></dt>
           <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar" style="width: 80%"></span></dd>
@@ -58,51 +57,34 @@
           <dd class="percentage"><span class="percentage__text"></span><span class="percentage__bar" style="width: 60%"></span></dd>
         </dl>
       </section>
-    </section>
 
+    </section>
     <section class="skills">
       <section class="skills__work">
         <div class="skills__work--logo"></div>
         <ol>
-          <li class="skill">
-            <div class="skill__date">
-              <time datetime="2016-02" class="startDate"></time>
-              -
-              <time datetime="2016-04" class="endDate"></time>
-            </div>
+          <li>
+            <time datetime="2016-02" class="startDate"></time>
+            -
+            <time datetime="2016-04" class="endDate"></time>
             <div class="skill__name employer"></div>
             <p class="skill__description">
               <span class="title"></span><br>
               <span class="description"></span></p>
           </li>
-          <li class="skill">
-            <div class="skill__date">
-              <time datetime="2013-09" class="startDate"></time>
-              -
-              <time datetime="2014-02" class="endDate"></time>
-            </div>
+          <li>
+            <time datetime="2013-09" class="startDate"></time>
+            -
+            <time datetime="2014-02" class="endDate"></time>
             <div class="skill__name employer"></div>
             <p class="skill__description">
               <span class="title"></span><br>
               <span class="description"></span></p>
           </li>
-          <li class="skill">
-            <div class="skill__date">
-              <time datetime="2011-09" class="startDate"></time>
-              -
-              <time datetime="2012-09" class="endDate"></time>
-            </div>
-            <div class="skill__name employer"></div>
-            <p class="skill__description">
-              <span class="title"></span><br>
-              <span class="description"></span></p>
-          </li>
-          <li class="skill">
-            <div class="skill__date">
-              <time datetime="2010" class="startDate"></time>
-              -
-              <time datetime="2015" class="endDate"></time>
-            </div>
+          <li>
+            <time datetime="2010" class="startDate"></time>
+            -
+            <time datetime="2015" class="endDate"></time>
             <div class="skill__name employer"></div>
             <p class="skill__description">
               <span class="title"></span><br>
@@ -114,34 +96,41 @@
       <section class="skills__education">
         <div class="skills__education--logo"></div>
         <ol>
-          <li class="skill">
-            <div class="skill__date">
-              <time datetime="2006" class="skill__date--startDate"></time>
-              -
-              <time datetime="2011" class="skill__date--endDate"></time>
-              <span id="location"></span>
-            </div>
+          <li>
+            <time datetime="2006" class="skill__date--startDate"></time>
+            -
+            <time datetime="2011" class="skill__date--endDate"></time>
+            <span id="location"></span>
             <a href="" class="skill__name" id="schoolName"></a>
             <p class="skill__description" id="degree"></p>
           </li>
         </ol>
       </section>
+      <!--<section class="skills_projects">-->
+        <!--<ol>-->
+          <!--<li>-->
+            <!--<time datetime="2006" class="skill__date&#45;&#45;startDate"></time>-->
+            <!-- - -->
+            <!--<time datetime="2011" class="skill__date&#45;&#45;endDate"></time>-->
+            <!--<p id="title"></p>-->
+            <!--<p class="skill__description"></p>-->
+          <!--</li>-->
+        <!--</ol>-->
+
+      <!--</section>-->
       <section class="skills__certificates">
         <div class="skills__certificates--logo"></div>
         <ol>
-          <li class="skill__name--oracle" id="oracle"></li>
-          <li class="skill__name--google" id="google"></li>
-          <li class="skill__name--udacity" id="udacity"></li>
+          <li class="certificate__name--oracle" id="oracle"></li>
+          <li class="certificate__name--google" id="google"></li>
+          <li class="certificate__name--udacity" id="udacity"></li>
         </ol>
       </section>
     </section>
   </main>
-
   <aside>
     <div id="map" class="map"></div>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXkSXBimYMtfxcYqX1SL0H8r2B3uwza1M&callback=initMap">
-    </script>
+
   </aside>
 </div>
 <script
@@ -149,5 +138,8 @@
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
 <script src="scripts/main.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXkSXBimYMtfxcYqX1SL0H8r2B3uwza1M&callback=initMap">
+</script>
 </body>
 </html>
