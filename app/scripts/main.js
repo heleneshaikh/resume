@@ -2,7 +2,7 @@
 
 var locations = [];
 function initMap() {
-  locations.push([["Where I live", "50.833822", "4.524999", "home"]]);
+  locations.push(["Where I live", "50.833822", "4.524999", "home"]);
   var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 11,
     scrollwheel: false,

@@ -81,11 +81,6 @@
   background-color: white;
   flex-direction: column;
   position: relative; }
-  .graphs__bar {
-    display: block;
-    background: linear-gradient(to right, #A12750, #d14373);
-    margin-bottom: 10px;
-    height: 30%; }
   .graphs .percentage {
     font-size: .8em;
     line-height: 1;
@@ -102,6 +97,14 @@
       left: 0;
       box-sizing: border-box;
       padding: 8px 20px 8px 0; }
+    .graphs .percentage__bar {
+      display: block;
+      background: linear-gradient(to right, #A12750, #d14373);
+      margin-bottom: 10px;
+      height: 30%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
 
 .skills {
   flex-basis: 50%;
