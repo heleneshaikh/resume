@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 .skill__name, .certificate__name--google, .certificate__name--udacity, .certificate__name--oracle {
-  color: #A12750;
+  color: #a12750;
   font-weight: bold;
   text-transform: uppercase;
   padding-top: 3.2px; }
@@ -27,7 +27,7 @@
 .contact-info__logo--born {
   position: relative; }
   .contact-info__logo--born::before {
-    background: url("../images/born.svg") no-repeat center #A12750;
+    background: url("../images/born.svg") no-repeat center #a12750;
     position: absolute;
     background-size: 25px;
     height: 40px;
@@ -39,7 +39,7 @@
 .contact-info__logo--phone {
   position: relative; }
   .contact-info__logo--phone::before {
-    background: url("../images/phone.svg") no-repeat center #A12750;
+    background: url("../images/phone.svg") no-repeat center #a12750;
     position: absolute;
     background-size: 25px;
     height: 40px;
@@ -51,7 +51,7 @@
 .contact-info__logo--github {
   position: relative; }
   .contact-info__logo--github::before {
-    background: url("../images/github.svg") no-repeat center #A12750;
+    background: url("../images/github.svg") no-repeat center #a12750;
     position: absolute;
     background-size: 25px;
     height: 40px;
@@ -63,7 +63,7 @@
 .contact-info__logo--address {
   position: relative; }
   .contact-info__logo--address::before {
-    background: url("../images/address.svg") no-repeat center #A12750;
+    background: url("../images/address.svg") no-repeat center #a12750;
     position: absolute;
     background-size: 25px;
     height: 40px;
@@ -99,7 +99,7 @@
       padding: 8px 20px 8px 0; }
     .graphs .percentage__bar {
       display: block;
-      background: linear-gradient(to right, #A12750, #d14373);
+      background: linear-gradient(to right, #a12750, #d65882);
       margin-bottom: 10px;
       height: 30%;
       position: relative;
@@ -108,7 +108,7 @@
 
 .skills {
   flex-basis: 50%;
-  border-left: 1px dashed #A12750;
+  border-left: 1px dashed #a12750;
   padding-left: 40px; }
   .skills p {
     margin: 0; }
@@ -116,7 +116,7 @@
 .skills__work--logo {
   min-height: 35px; }
   .skills__work--logo::before {
-    background: url("../images/work.svg") no-repeat center #A12750;
+    background: url("../images/work.svg") no-repeat center #a12750;
     position: absolute;
     background-size: 25px;
     height: 40px;
@@ -128,7 +128,7 @@
 .skills__certificates--logo {
   min-height: 35px; }
   .skills__certificates--logo::before {
-    background: url("../images/certificates.svg") no-repeat center #A12750;
+    background: url("../images/certificates.svg") no-repeat center #a12750;
     position: absolute;
     background-size: 25px;
     height: 40px;
@@ -140,7 +140,7 @@
 .skills__education--logo {
   min-height: 35px; }
   .skills__education--logo::before {
-    background: url("../images/education.svg") no-repeat center #A12750;
+    background: url("../images/education.svg") no-repeat center #a12750;
     position: absolute;
     background-size: 25px;
     height: 40px;
@@ -240,7 +240,7 @@ body {
   font: 1.6rem "Roboto", sans-serif;
   line-height: 1.5;
   margin: 0;
-  border-top: 10px solid #A12750;
+  border-top: 10px solid #a12750;
   padding-bottom: 32px; }
 
 p {
@@ -251,7 +251,7 @@ p {
   margin: 0 auto; }
 
 h1 {
-  color: #A12750;
+  color: #a12750;
   margin: 0;
   font-size: 3rem; }
 

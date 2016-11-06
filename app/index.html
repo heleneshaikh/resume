@@ -10,13 +10,14 @@
 <body>
 <div class="container">
   <main>
+    <!--Left pane with portrait, contact details and skills graph-->
     <section class="about">
       <div class="about--portrait">
         <h1 id="name"></h1>
         <h2 id="role"></h2>
         <picture class="portrait">
-          <img src="images/helene.jpg"
-               srcset="images/helene.jpg 320w" alt="Helene" sizes="(max-width:550px) 30vw, 18vw">
+          <img src="images/helene.jpg" id="image"
+          srcset="" alt="Helene" sizes="(max-width:550px) 30vw, 10vw">
         </picture>
       </div>
       <p id="welcome"></p>
@@ -63,6 +64,7 @@
       </dl>
     </section>
 
+    <!--Right pane with work, education, project and certificate details-->
     <section class="skills">
       <section class="skills__work">
         <div class="skills__work--logo"></div>
@@ -106,7 +108,7 @@
             <time datetime="2011" class="skill__date--endDate"></time>
             <br>
             <span id="location"></span>
-            <a href="" class="skill__name" id="schoolName"></a>
+            <a href="" class="skill__name" id="schoolName" target="_blank"></a>
             <p class="skill__description" id="degree"></p>
           </li>
         </ol>
@@ -117,7 +119,7 @@
             <time datetime="2006" class="project__date"></time>
             <p class="skill__name" id="title"></p>
             <p id="project__description"></p>
-            <img src="" alt="" id="project__image" width="250" height="170px">
+            <img src="" alt="" id="project__image" width="250" height="170">
           </li>
         </ol>
       </section>
@@ -131,6 +133,7 @@
       </section>
     </section>
   </main>
+  <!--Aside with map demonstrating the work, study and home locations-->
   <aside>
     <div id="map" class="map"></div>
   </aside>
