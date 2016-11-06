@@ -80,7 +80,7 @@ var bio = {
   skills: [
     "HTML", "CSS", "JavaScript", "Jave EE", "Android", "Git", "English", "French", "Dutch", "Spanish"
   ],
-  biopic: "https://avatars1.githubusercontent.com/u/11255436?v=3&s=466",
+  biopic: "https://avatars1.githubusercontent.com/u/11255436?v=3&s=466 320w",
   display: function() {
     document.getElementById("name").append(bio.name);
     document.getElementById("role").append(bio.role);
@@ -197,7 +197,7 @@ var education = {
     ],
     startDate: "2006",
     endDate: "2011",
-    url: "https://www.vub.ac.be/" //todo
+    url: "https://www.vub.ac.be/"
   }],
   onlineCourses: [{
     title: "Try Git",
