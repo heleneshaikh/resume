@@ -76,6 +76,9 @@ main {
   flex-wrap: wrap;
 
   @media screen and (max-width: 930px) {
+    .title {
+      text-align: inherit;
+    }
     .container {
       font-size: 4rem;
     }
