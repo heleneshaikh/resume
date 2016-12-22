@@ -75,7 +75,7 @@ main {
   justify-content: space-between;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 930px) {
+  @media all and (max-width: 780px) {
     .title {
       text-align: inherit;
     }
@@ -90,4 +90,5 @@ main {
       margin-left: 20px;
     }
   }
+
 }
