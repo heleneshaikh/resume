@@ -267,6 +267,9 @@ ol {
   ol li {
     margin-bottom: 28.8px; }
 
+.graphs, .skills__work li {
+  page-break-inside: avoid; }
+
 main {
   padding-top: 40px;
   display: flex;
