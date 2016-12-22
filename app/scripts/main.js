@@ -63,6 +63,6 @@ function initMap() {
   }
 }
 
-initMap();
+// initMap();
 
 
