@@ -272,7 +272,9 @@ main {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
-  @media screen and (max-width: 930px) {
+  @media all and (max-width: 780px) {
+    main .title {
+      text-align: inherit; }
     main .container {
       font-size: 4rem; }
     main .about, main .skills {
